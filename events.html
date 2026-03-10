@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events – El Shaddai Church Aberdeen</title>
+    <meta name="description"
+        content="Upcoming events at El Shaddai Church Aberdeen. Sunday services, Bible study, prayer meetings, youth events, and special conferences." />
+    <link rel="canonical" href="https://elshaddaichurch.org.uk/events.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4DA6FF', 'primary-dark': '#2980d9',
+                        accent: '#C9A227', 'accent-dark': '#a8841e',
+                        church: { text: '#333333', light: '#666666', bg: '#F5F7FA' }
+                    },
+                    fontFamily: { poppins: ['Poppins', 'sans-serif'], sans: ['Open Sans', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%234DA6FF'/><text y='.9em' font-size='70' x='15' fill='white'>✝</text></svg>" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+    <!-- ══ NAVIGATION ══ -->
+    <nav id="navbar" aria-label="Main Navigation">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="El Shaddai Church Home">
+                <div class="nav-logo-icon" aria-hidden="true">✝</div>
+                <div class="nav-logo-text">
+                    <div class="church-name">El Shaddai Church</div>
+                    <div class="church-location">Aberdeen, Scotland</div>
+                </div>
+            </a>
+            <ul class="nav-links" role="list">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="about.html" aria-haspopup="true" aria-expanded="false">About ▾</a>
+                    <ul class="dropdown-menu" role="list">
+                        <li><a href="about.html">Leadership</a></li>
+                        <li><a href="about.html#expect">What to Expect</a></li>
+                        <li><a href="about.html#faith">Declaration of Faith</a></li>
+                    </ul>
+                </li>
+                <li><a href="ministries.html">Ministries</a></li>
+                <li><a href="sermons.html">Sermons</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html#visit" class="nav-cta">Plan Your Visit</a></li>
+            </ul>
+            <button id="hamburger" class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false"
+                aria-controls="mobileNav">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div id="mobileNav" class="mobile-nav" role="navigation">
+            <a href="index.html">🏠 Home</a>
+            <a href="about.html">✝ About Us</a>
+            <a href="ministries.html">👥 Ministries</a>
+            <a href="sermons.html">🎙 Sermons</a>
+            <a href="events.html" class="text-primary">📅 Events</a>
+            <a href="contact.html">📬 Contact</a>
+            <a href="contact.html#visit" class="btn btn-primary btn-sm mt-3 inline-block">Plan Your Visit</a>
+        </div>
+    </nav>
+
+    <!-- ══ PAGE HEADER ══ -->
+    <header class="page-header" role="banner" aria-labelledby="page-title">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <i class="fa-solid fa-chevron-right text-xs opacity-60" aria-hidden="true"></i>
+            <span>Events</span>
+        </nav>
+        <h1 id="page-title">Upcoming Events</h1>
+        <p>Come and be part of what God is doing in our community.</p>
+    </header>
+
+    <!-- ══ REGULAR SERVICES ══ -->
+    <section class="section" id="services" aria-labelledby="services-title">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">Every Week</span>
+                <h2 id="services-title" class="section-title">Regular Services</h2>
+                <div class="accent-divider"></div>
+                <p class="section-subtitle">Join us week after week as we gather to worship, pray, and grow together.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 stagger">
+
+                <div class="card text-center p-6" role="article" aria-labelledby="sunday-service-title">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center text-2xl text-white mx-auto mb-4"
+                        aria-hidden="true">
+                        <i class="fa-solid fa-church"></i>
+                    </div>
+                    <h3 id="sunday-service-title" class="font-poppins font-bold text-lg mb-2">Sunday Worship</h3>
+                    <p class="text-church-light text-sm mb-4">Our main weekly gathering for the whole family — worship,
+                        Word, and fellowship.</p>
+                    <div class="bg-blue-50 rounded-xl p-3 text-xs font-poppins font-semibold text-primary">
+                        <div>Every Sunday</div>
+                        <div class="text-primary-dark">10:30 AM</div>
+                    </div>
+                </div>
+
+                <div class="card text-center p-6" role="article" aria-labelledby="bible-study-title">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent to-accent-dark rounded-2xl flex items-center justify-center text-2xl text-white mx-auto mb-4"
+                        aria-hidden="true">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3 id="bible-study-title" class="font-poppins font-bold text-lg mb-2">Bible Study</h3>
+                    <p class="text-church-light text-sm mb-4">Dig into the Scriptures in an interactive, small-group
+                        setting for all ages.</p>
+                    <div class="bg-amber-50 rounded-xl p-3 text-xs font-poppins font-semibold text-accent">
+                        <div>Every Wednesday</div>
+                        <div class="text-accent-dark">7:00 PM</div>
+                    </div>
+                </div>
+
+                <div class="card text-center p-6" role="article" aria-labelledby="prayer-meeting-title">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center text-2xl text-white mx-auto mb-4"
+                        aria-hidden="true">
+                        <i class="fa-solid fa-hands-praying"></i>
+                    </div>
+                    <h3 id="prayer-meeting-title" class="font-poppins font-bold text-lg mb-2">Prayer Meeting</h3>
+                    <p class="text-church-light text-sm mb-4">Interceding together for the church, the city, and the
+                        nations. All are welcome.</p>
+                    <div class="bg-green-50 rounded-xl p-3 text-xs font-poppins font-semibold text-green-600">
+                        <div>Every Friday</div>
+                        <div>7:00 PM</div>
+                    </div>
+                </div>
+
+                <div class="card text-center p-6" role="article" aria-labelledby="youth-service-title">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-indigo-600 rounded-2xl flex items-center justify-center text-2xl text-white mx-auto mb-4"
+                        aria-hidden="true">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <h3 id="youth-service-title" class="font-poppins font-bold text-lg mb-2">Youth Service</h3>
+                    <p class="text-church-light text-sm mb-4">A high-energy service designed for teenagers and young
+                        adults aged 13–25.</p>
+                    <div class="bg-purple-50 rounded-xl p-3 text-xs font-poppins font-semibold text-purple-600">
+                        <div>Every Saturday</div>
+                        <div>5:00 PM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ UPCOMING EVENTS ══ -->
+    <section class="section pattern-bg" id="upcoming" aria-labelledby="upcoming-title">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">2026</span>
+                <h2 id="upcoming-title" class="section-title">Upcoming Special Events</h2>
+                <div class="accent-divider"></div>
+                <p class="section-subtitle">Don't miss these special gatherings and community events.</p>
+            </div>
+
+            <div class="flex flex-col gap-6 max-w-4xl mx-auto stagger">
+
+                <!-- Event 1 -->
+                <div class="event-card" role="article" aria-labelledby="event-revival-title">
+                    <div class="event-date-box" style="background: linear-gradient(135deg,#C9A227,#a8841e);">
+                        <span class="day">29</span>
+                        <span class="month">Mar</span>
+                    </div>
+                    <div class="event-body flex-1">
+                        <div class="flex flex-wrap items-start justify-between gap-2">
+                            <div>
+                                <span class="tag tag-gold mb-2">Conference</span>
+                                <h3 id="event-revival-title" class="font-poppins font-bold text-lg mb-1">Spring Revival
+                                    Conference</h3>
+                                <p class="text-xs text-church-light mb-2">
+                                    <i class="fa-solid fa-clock mr-1" aria-hidden="true"></i> 10:00 AM – 6:00 PM
+                                    <span class="mx-2">•</span>
+                                    <i class="fa-solid fa-location-dot mr-1" aria-hidden="true"></i> Main Sanctuary, El
+                                    Shaddai Church
+                                </p>
+                                <p class="text-sm text-church-light max-w-lg">
+                                    A powerful day of renewal, worship, and ministry. Guest ministers will join us for
+                                    this
+                                    special conference. Bring your family and friends!
+                                </p>
+                            </div>
+                            <a href="contact.html?event=revival" class="btn btn-accent btn-sm flex-shrink-0"
+                                id="register-revival-btn">
+                                Register Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="event-card" role="article" aria-labelledby="event-outreach-title" id="conference">
+                    <div class="event-date-box" style="background: linear-gradient(135deg,#27ae60,#2ecc71);">
+                        <span class="day">12</span>
+                        <span class="month">Apr</span>
+                    </div>
+                    <div class="event-body flex-1">
+                        <div class="flex flex-wrap items-start justify-between gap-2">
+                            <div>
+                                <span class="tag tag-blue mb-2">Community</span>
+                                <h3 id="event-outreach-title" class="font-poppins font-bold text-lg mb-1">Community
+                                    Outreach Day</h3>
+                                <p class="text-xs text-church-light mb-2">
+                                    <i class="fa-solid fa-clock mr-1" aria-hidden="true"></i> 11:00 AM – 3:00 PM
+                                    <span class="mx-2">•</span>
+                                    <i class="fa-solid fa-location-dot mr-1" aria-hidden="true"></i> Aberdeen City
+                                    Centre
+                                </p>
+                                <p class="text-sm text-church-light max-w-lg">
+                                    Join our outreach team as we serve food, share the love of Christ, and engage with
+                                    our local community. Volunteers of all ages are welcome.
+                                </p>
+                            </div>
+                            <a href="contact.html?event=outreach" class="btn btn-primary btn-sm flex-shrink-0"
+                                id="register-outreach-btn">
+                                Register
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="event-card" role="article" aria-labelledby="event-women-title">
+                    <div class="event-date-box" style="background: linear-gradient(135deg,#f093fb,#f5576c);">
+                        <span class="day">26</span>
+                        <span class="month">Apr</span>
+                    </div>
+                    <div class="event-body flex-1">
+                        <div class="flex flex-wrap items-start justify-between gap-2">
+                            <div>
+                                <span class="tag" style="background:rgba(240,147,251,0.15);color:#c0392b;"
+                                    class="mb-2">Women</span>
+                                <h3 id="event-women-title" class="font-poppins font-bold text-lg mb-1">Women's Annual
+                                    Retreat</h3>
+                                <p class="text-xs text-church-light mb-2">
+                                    <i class="fa-solid fa-clock mr-1" aria-hidden="true"></i> All day
+                                    <span class="mx-2">•</span>
+                                    <i class="fa-solid fa-location-dot mr-1" aria-hidden="true"></i> Venue TBC, Aberdeen
+                                </p>
+                                <p class="text-sm text-church-light max-w-lg">
+                                    A day of refreshment, empowerment, and sisterhood for all women of the church.
+                                    Worship, teaching, and fellowship guaranteed. Spaces are limited.
+                                </p>
+                            </div>
+                            <a href="contact.html?event=women-retreat" class="btn btn-sm flex-shrink-0"
+                                style="background:linear-gradient(135deg,#f093fb,#f5576c);color:white;"
+                                id="register-women-btn">
+                                Register
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 4 -->
+                <div class="event-card" role="article" aria-labelledby="event-youth-title">
+                    <div class="event-date-box" style="background: linear-gradient(135deg,#6c5ce7,#a29bfe);">
+                        <span class="day">10</span>
+                        <span class="month">May</span>
+                    </div>
+                    <div class="event-body flex-1">
+                        <div class="flex flex-wrap items-start justify-between gap-2">
+                            <div>
+                                <span class="tag tag-blue mb-2">Youth</span>
+                                <h3 id="event-youth-title" class="font-poppins font-bold text-lg mb-1">Youth Summer
+                                    Kickoff</h3>
+                                <p class="text-xs text-church-light mb-2">
+                                    <i class="fa-solid fa-clock mr-1" aria-hidden="true"></i> 2:00 PM – 8:00 PM
+                                    <span class="mx-2">•</span>
+                                    <i class="fa-solid fa-location-dot mr-1" aria-hidden="true"></i> Church Hall &
+                                    Grounds
+                                </p>
+                                <p class="text-sm text-church-light max-w-lg">
+                                    An epic afternoon of games, worship, food, and fellowship to kick off the summer
+                                    season.
+                                    Open to all youth aged 13–25 and their friends.
+                                </p>
+                            </div>
+                            <a href="contact.html?event=youth-summer" class="btn btn-primary btn-sm flex-shrink-0"
+                                id="register-youth-btn">
+                                Register
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 5 -->
+                <div class="event-card" role="article" aria-labelledby="event-summer-title">
+                    <div class="event-date-box">
+                        <span class="day">21</span>
+                        <span class="month">Jun</span>
+                    </div>
+                    <div class="event-body flex-1">
+                        <div class="flex flex-wrap items-start justify-between gap-2">
+                            <div>
+                                <span class="tag tag-blue mb-2">Special</span>
+                                <h3 id="event-summer-title" class="font-poppins font-bold text-lg mb-1">Special
+                                    Thanksgiving Service</h3>
+                                <p class="text-xs text-church-light mb-2">
+                                    <i class="fa-solid fa-clock mr-1" aria-hidden="true"></i> 10:30 AM
+                                    <span class="mx-2">•</span>
+                                    <i class="fa-solid fa-location-dot mr-1" aria-hidden="true"></i> Main Sanctuary
+                                </p>
+                                <p class="text-sm text-church-light max-w-lg">
+                                    A special service of thanksgiving and praise as we celebrate all that God has done
+                                    in our church and community through the first half of the year.
+                                </p>
+                            </div>
+                            <a href="contact.html?event=thanksgiving " class="btn btn-outline-dark btn-sm flex-shrink-0"
+                                id="learn-thanksgiving-btn">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ ADD TO CALENDAR CTA ══ -->
+    <section class="section" aria-label="Stay updated call to action">
+        <div class="container max-w-3xl text-center fade-in">
+            <div class="text-6xl mb-4" aria-hidden="true">📅</div>
+            <h2 class="font-poppins font-bold text-2xl mb-3">Never Miss an Event</h2>
+            <p class="text-church-light mb-6">
+                Follow us on social media and subscribe to our newsletter to stay updated with all
+                upcoming events, services, and special announcements.
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="https://www.facebook.com/elshaddaichurch/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-primary" id="events-facebook-btn">
+                    <i class="fa-brands fa-facebook-f mr-1" aria-hidden="true"></i> Follow on Facebook
+                </a>
+                <a href="contact.html" class="btn btn-outline-dark" id="events-newsletter-btn">
+                    <i class="fa-solid fa-envelope mr-1" aria-hidden="true"></i> Subscribe to Newsletter
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-grid">
+            <div>
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="nav-logo-icon" aria-hidden="true">✝</div>
+                    <div>
+                        <div class="footer-logo-text">El Shaddai Church</div>
+                        <div class="footer-tagline">Aberdeen, Scotland</div>
+                    </div>
+                </div>
+                <p class="footer-desc">A vibrant, Spirit-filled community committed to worshipping God, growing in
+                    faith, and serving our city with the love of Jesus Christ.</p>
+                <div class="social-links" aria-label="Social media links">
+                    <a href="https://www.facebook.com/elshaddaichurch/" target="_blank" rel="noopener noreferrer"
+                        class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"
+                            aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/elshaddaichurchaberdeen/" target="_blank"
+                        rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank" rel="noopener noreferrer"
+                        class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"
+                            aria-hidden="true"></i></a>
+                    <a href="mailto:info@elshaddaichurch.org.uk" class="social-link" aria-label="Email"><i
+                            class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="ministries.html">Ministries</a></li>
+                    <li><a href="sermons.html">Sermons</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Service Times</h4>
+                <div class="service-time">
+                    <div class="service-time-dot" aria-hidden="true"></div>
+                    <div>
+                        <div class="text-white text-sm font-semibold font-poppins">Sunday Worship</div>
+                        <div class="text-white/50 text-xs">10:30 AM</div>
+                    </div>
+                </div>
+                <div class="service-time">
+                    <div class="service-time-dot" aria-hidden="true"></div>
+                    <div>
+                        <div class="text-white text-sm font-semibold font-poppins">Bible Study</div>
+                        <div class="text-white/50 text-xs">Wednesday 7:00 PM</div>
+                    </div>
+                </div>
+                <div class="service-time">
+                    <div class="service-time-dot" aria-hidden="true"></div>
+                    <div>
+                        <div class="text-white text-sm font-semibold font-poppins">Prayer Meeting</div>
+                        <div class="text-white/50 text-xs">Friday 7:00 PM</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>Stay Connected</h4>
+                <form id="newsletterForm" aria-label="Newsletter signup">
+                    <div class="newsletter-form">
+                        <label for="newsletter-email" class="sr-only">Email address</label>
+                        <input type="email" id="newsletter-email" class="newsletter-input" placeholder="your@email.com"
+                            required autocomplete="email" />
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 El Shaddai Church Aberdeen. All rights reserved.</p>
+            <p>Made with ❤️ for God's glory</p>
+        </div>
+    </footer>
+
+    <button id="scrollTop" aria-label="Scroll back to top"><i class="fa-solid fa-chevron-up"
+            aria-hidden="true"></i></button>
+    <script src="js/main.js" defer></script>
+    <script src="js/animations.js" defer></script>
+</body>
+
+</html>

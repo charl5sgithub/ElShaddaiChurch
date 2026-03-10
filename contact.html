@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us – El Shaddai Church Aberdeen</title>
+    <meta name="description"
+        content="Get in touch with El Shaddai Church Aberdeen. Find our address, service times, phone number, and contact form. Plan your first visit today." />
+    <link rel="canonical" href="https://elshaddaichurch.org.uk/contact.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4DA6FF', 'primary-dark': '#2980d9',
+                        accent: '#C9A227', 'accent-dark': '#a8841e',
+                        church: { text: '#333333', light: '#666666', bg: '#F5F7FA' }
+                    },
+                    fontFamily: { poppins: ['Poppins', 'sans-serif'], sans: ['Open Sans', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%234DA6FF'/><text y='.9em' font-size='70' x='15' fill='white'>✝</text></svg>" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+    <!-- ══ NAVIGATION ══ -->
+    <nav id="navbar" aria-label="Main Navigation">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="El Shaddai Church Home">
+                <div class="nav-logo-icon" aria-hidden="true">✝</div>
+                <div class="nav-logo-text">
+                    <div class="church-name">El Shaddai Church</div>
+                    <div class="church-location">Aberdeen, Scotland</div>
+                </div>
+            </a>
+            <ul class="nav-links" role="list">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="about.html" aria-haspopup="true" aria-expanded="false">About ▾</a>
+                    <ul class="dropdown-menu" role="list">
+                        <li><a href="about.html">Leadership</a></li>
+                        <li><a href="about.html#expect">What to Expect</a></li>
+                        <li><a href="about.html#faith">Declaration of Faith</a></li>
+                    </ul>
+                </li>
+                <li><a href="ministries.html">Ministries</a></li>
+                <li><a href="sermons.html">Sermons</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html#visit" class="nav-cta">Plan Your Visit</a></li>
+            </ul>
+            <button id="hamburger" class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false"
+                aria-controls="mobileNav">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div id="mobileNav" class="mobile-nav" role="navigation">
+            <a href="index.html">🏠 Home</a>
+            <a href="about.html">✝ About Us</a>
+            <a href="ministries.html">👥 Ministries</a>
+            <a href="sermons.html">🎙 Sermons</a>
+            <a href="events.html">📅 Events</a>
+            <a href="contact.html" class="text-primary">📬 Contact</a>
+            <a href="contact.html#visit" class="btn btn-primary btn-sm mt-3 inline-block">Plan Your Visit</a>
+        </div>
+    </nav>
+
+    <!-- ══ PAGE HEADER ══ -->
+    <header class="page-header" role="banner" aria-labelledby="page-title">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <i class="fa-solid fa-chevron-right text-xs opacity-60" aria-hidden="true"></i>
+            <span>Contact</span>
+        </nav>
+        <h1 id="page-title">Get in Touch</h1>
+        <p>We'd love to hear from you. Reach out and let us know how we can help.</p>
+    </header>
+
+    <!-- ══ CONTACT INFO + FORM ══ -->
+    <section class="section" id="contact-section" aria-labelledby="contact-title">
+        <div class="container">
+            <div class="grid lg:grid-cols-5 gap-12">
+
+                <!-- Contact Information -->
+                <div class="lg:col-span-2 fade-in-left">
+                    <span class="section-badge" style="margin-left:0;">Contact Information</span>
+                    <h2 id="contact-title" class="font-poppins font-bold text-2xl mt-3 mb-6">We're Here for You</h2>
+
+                    <div class="flex flex-col gap-4">
+                        <div class="info-card" role="group" aria-labelledby="address-label">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3 id="address-label" class="font-poppins font-semibold text-base mb-1">Church Address
+                                </h3>
+                                <p class="text-church-light text-sm" id="church-address">
+                                    El Shaddai Church<br />
+                                    Aberdeen, Scotland<br />
+                                    United Kingdom
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="info-card" role="group" aria-labelledby="phone-label">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3 id="phone-label" class="font-poppins font-semibold text-base mb-1">Phone</h3>
+                                <a href="tel:+441224000000" class="text-primary text-sm hover:underline">+44 (0) 1224
+                                    000 000</a>
+                            </div>
+                        </div>
+
+                        <div class="info-card" role="group" aria-labelledby="email-label">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3 id="email-label" class="font-poppins font-semibold text-base mb-1">Email</h3>
+                                <a href="mailto:info@elshaddaichurch.org.uk"
+                                    class="text-primary text-sm hover:underline">info@elshaddaichurch.org.uk</a>
+                            </div>
+                        </div>
+
+                        <div class="info-card" role="group" aria-labelledby="hours-label">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3 id="hours-label" class="font-poppins font-semibold text-base mb-2">Service Times
+                                </h3>
+                                <ul class="text-church-light text-sm space-y-1">
+                                    <li><strong class="font-poppins font-semibold text-church-text">Sunday
+                                            Worship</strong> – 10:30 AM</li>
+                                    <li><strong class="font-poppins font-semibold text-church-text">Bible Study</strong>
+                                        – Wed 7:00 PM</li>
+                                    <li><strong class="font-poppins font-semibold text-church-text">Prayer
+                                            Meeting</strong> – Fri 7:00 PM</li>
+                                    <li><strong class="font-poppins font-semibold text-church-text">Youth
+                                            Service</strong> – Sat 5:00 PM</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="mt-6">
+                        <h3 class="font-poppins font-semibold text-base mb-3">Follow Us</h3>
+                        <div class="flex gap-3">
+                            <a href="https://www.facebook.com/elshaddaichurch/" target="_blank"
+                                rel="noopener noreferrer" class="social-link"
+                                style="background: rgba(59,91,218,0.1); color: #3b5bda;"
+                                aria-label="Follow us on Facebook">
+                                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.instagram.com/elshaddaichurchaberdeen/" target="_blank"
+                                rel="noopener noreferrer" class="social-link"
+                                style="background: rgba(225,48,108,0.1); color: #e1306c;"
+                                aria-label="Follow us on Instagram">
+                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank"
+                                rel="noopener noreferrer" class="social-link"
+                                style="background: rgba(255,0,0,0.1); color: #ff0000;"
+                                aria-label="Subscribe on YouTube">
+                                <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-3 fade-in-right">
+                    <div class="card p-8">
+                        <h2 class="font-poppins font-bold text-2xl mb-6">Send Us a Message</h2>
+
+                        <form id="contactForm" novalidate aria-label="Contact form">
+                            <div class="grid md:grid-cols-2 gap-5">
+                                <div class="form-group">
+                                    <label for="firstName" class="form-label">First Name <span class="text-red-500"
+                                            aria-hidden="true">*</span></label>
+                                    <input type="text" id="firstName" name="firstName" class="form-input"
+                                        placeholder="John" required autocomplete="given-name" aria-required="true" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName" class="form-label">Last Name <span class="text-red-500"
+                                            aria-hidden="true">*</span></label>
+                                    <input type="text" id="lastName" name="lastName" class="form-input"
+                                        placeholder="Smith" required autocomplete="family-name" aria-required="true" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address <span class="text-red-500"
+                                        aria-hidden="true">*</span></label>
+                                <input type="email" id="email" name="email" class="form-input"
+                                    placeholder="john@example.com" required autocomplete="email" aria-required="true" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-input"
+                                    placeholder="+44 7700 000000" autocomplete="tel" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject <span class="text-red-500"
+                                        aria-hidden="true">*</span></label>
+                                <select id="subject" name="subject" class="form-select" required aria-required="true">
+                                    <option value="" disabled selected>Select a subject…</option>
+                                    <option value="general">General Enquiry</option>
+                                    <option value="visit">Planning a Visit</option>
+                                    <option value="ministry">Ministry Interest</option>
+                                    <option value="prayer">Prayer Request</option>
+                                    <option value="event">Event Registration</option>
+                                    <option value="pastoral">Pastoral Support</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message <span class="text-red-500"
+                                        aria-hidden="true">*</span></label>
+                                <textarea id="message" name="message" class="form-textarea"
+                                    placeholder="How can we help you?" required aria-required="true"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-full justify-center text-base py-4"
+                                id="contact-submit-btn">
+                                <i class="fa-solid fa-paper-plane mr-2" aria-hidden="true"></i>
+                                Send Message
+                            </button>
+
+                            <p class="text-xs text-church-light text-center mt-3">
+                                We aim to respond within 48 hours. Your information is kept confidential.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ MAP ══ -->
+    <section class="section-sm pattern-bg" id="directions" aria-labelledby="map-title">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">Location</span>
+                <h2 id="map-title" class="section-title">Find Us</h2>
+                <div class="accent-divider"></div>
+            </div>
+
+            <div class="map-wrapper fade-in">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2162.903498887948!2d-2.096860684160327!3d57.14952098080614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488405b4ef39ab4b%3A0xaed5d5c7d36ac8bd!2sAberdeen%20City%20Centre!5e0!3m2!1sen!2suk!4v1641908234533!5m2!1sen!2suk"
+                    title="El Shaddai Church Aberdeen location map" allowfullscreen loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    aria-label="Map showing Aberdeen city centre location"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ PLAN YOUR VISIT ══ -->
+    <section class="section" id="visit" aria-labelledby="visit-title">
+        <div class="container max-w-5xl">
+            <div class="section-header fade-in">
+                <span class="section-badge">First Visit</span>
+                <h2 id="visit-title" class="section-title">Plan Your Visit</h2>
+                <div class="accent-divider"></div>
+                <p class="section-subtitle">Here's everything you need to know before coming for the first time.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger">
+
+                <div class="faith-card">
+                    <div class="faith-icon" style="background:rgba(77,166,255,0.12);">👚</div>
+                    <h3 class="font-poppins font-bold text-base mb-2">What to Wear</h3>
+                    <p class="text-church-light text-sm">Come as you are! We are a casual, welcoming church. Smart
+                        casual to formal — all are welcome here.</p>
+                </div>
+
+                <div class="faith-card">
+                    <div class="faith-icon" style="background:rgba(201,162,39,0.12);">🏛️</div>
+                    <h3 class="font-poppins font-bold text-base mb-2">When to Arrive</h3>
+                    <p class="text-church-light text-sm">We recommend arriving 10–15 minutes early. Our team will greet
+                        you and help you get settled comfortably.</p>
+                </div>
+
+                <div class="faith-card">
+                    <div class="faith-icon" style="background:rgba(46,204,113,0.12);">🧒</div>
+                    <h3 class="font-poppins font-bold text-base mb-2">Children's Programme</h3>
+                    <p class="text-church-light text-sm">We have a safe, fun children's programme running during the
+                        Sunday service for kids aged 3–12.</p>
+                </div>
+
+                <div class="faith-card">
+                    <div class="faith-icon" style="background:rgba(155,89,182,0.12);">🚗</div>
+                    <h3 class="font-poppins font-bold text-base mb-2">Parking</h3>
+                    <p class="text-church-light text-sm">Street parking is available nearby. Public transport links also
+                        serve the area conveniently.</p>
+                </div>
+
+                <div class="faith-card">
+                    <div class="faith-icon" style="background:rgba(231,76,60,0.12);">🤝</div>
+                    <h3 class="font-poppins font-bold text-base mb-2">First-Time Guests</h3>
+                    <p class="text-church-light text-sm">Look out for our welcoming team at the entrance. We'll make
+                        sure you feel right at home from your first moment.</p>
+                </div>
+
+                <div class="faith-card">
+                    <div class="faith-icon" style="background:rgba(52,152,219,0.12);">☕</div>
+                    <h3 class="font-poppins font-bold text-base mb-2">After Service</h3>
+                    <p class="text-church-light text-sm">Enjoy tea, coffee, and great conversation after every Sunday
+                        service. It's a wonderful time to connect and make new friends.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 p-8 rounded-2xl"
+                style="background: linear-gradient(135deg,rgba(77,166,255,0.08),rgba(201,162,39,0.06));">
+                <div class="text-5xl mb-3" aria-hidden="true">🙏</div>
+                <h3 class="font-poppins font-bold text-xl mb-3">We Can't Wait to Welcome You!</h3>
+                <p class="text-church-light mb-6 max-w-lg mx-auto text-sm">
+                    Have questions before your first visit? Feel free to reach out — we'd love to help you feel
+                    prepared and excited about joining us.
+                </p>
+                <a href="#contact-section" class="btn btn-primary" id="plan-visit-contact-btn">
+                    <i class="fa-solid fa-envelope mr-1" aria-hidden="true"></i>
+                    Contact Us Before You Come
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-grid">
+            <div>
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="nav-logo-icon" aria-hidden="true">✝</div>
+                    <div>
+                        <div class="footer-logo-text">El Shaddai Church</div>
+                        <div class="footer-tagline">Aberdeen, Scotland</div>
+                    </div>
+                </div>
+                <p class="footer-desc">A vibrant, Spirit-filled community committed to worshipping God, growing in
+                    faith, and serving our city with the love of Jesus Christ.</p>
+                <div class="social-links" aria-label="Social media links">
+                    <a href="https://www.facebook.com/elshaddaichurch/" target="_blank" rel="noopener noreferrer"
+                        class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"
+                            aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/elshaddaichurchaberdeen/" target="_blank"
+                        rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank" rel="noopener noreferrer"
+                        class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"
+                            aria-hidden="true"></i></a>
+                    <a href="mailto:info@elshaddaichurch.org.uk" class="social-link" aria-label="Email"><i
+                            class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="ministries.html">Ministries</a></li>
+                    <li><a href="sermons.html">Sermons</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Service Times</h4>
+                <div class="service-time">
+                    <div class="service-time-dot" aria-hidden="true"></div>
+                    <div>
+                        <div class="text-white text-sm font-semibold font-poppins">Sunday Worship</div>
+                        <div class="text-white/50 text-xs">10:30 AM</div>
+                    </div>
+                </div>
+                <div class="service-time">
+                    <div class="service-time-dot" aria-hidden="true"></div>
+                    <div>
+                        <div class="text-white text-sm font-semibold font-poppins">Bible Study</div>
+                        <div class="text-white/50 text-xs">Wednesday 7:00 PM</div>
+                    </div>
+                </div>
+                <div class="service-time">
+                    <div class="service-time-dot" aria-hidden="true"></div>
+                    <div>
+                        <div class="text-white text-sm font-semibold font-poppins">Prayer Meeting</div>
+                        <div class="text-white/50 text-xs">Friday 7:00 PM</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>Stay Connected</h4>
+                <form id="newsletterForm" aria-label="Newsletter signup">
+                    <div class="newsletter-form">
+                        <label for="newsletter-email" class="sr-only">Email address</label>
+                        <input type="email" id="newsletter-email" class="newsletter-input" placeholder="your@email.com"
+                            required autocomplete="email" />
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 El Shaddai Church Aberdeen. All rights reserved.</p>
+            <p>Made with ❤️ for God's glory</p>
+        </div>
+    </footer>
+
+    <button id="scrollTop" aria-label="Scroll back to top"><i class="fa-solid fa-chevron-up"
+            aria-hidden="true"></i></button>
+    <script src="js/main.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script>
+        // Pre-fill subject dropdown from ?subject= URL param (e.g. from prayer request links)
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const subject = params.get('subject');
+            if (subject) {
+                const subjectEl = document.getElementById('subject');
+                if (subjectEl) subjectEl.value = subject;
+            }
+        });
+    </script>
+</body>
+
+</html>

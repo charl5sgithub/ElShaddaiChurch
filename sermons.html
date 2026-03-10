@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sermons – El Shaddai Church Aberdeen</title>
+    <meta name="description"
+        content="Watch and listen to powerful sermons from El Shaddai Church Aberdeen on YouTube. Inspiring messages from Rev. Angeline S. Henry and guest ministers." />
+    <link rel="canonical" href="https://elshaddaichurch.org.uk/sermons.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4DA6FF', 'primary-dark': '#2980d9',
+                        accent: '#C9A227', 'accent-dark': '#a8841e',
+                        church: { text: '#333333', light: '#666666', bg: '#F5F7FA' }
+                    },
+                    fontFamily: { poppins: ['Poppins', 'sans-serif'], sans: ['Open Sans', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%234DA6FF'/><text y='.9em' font-size='70' x='15' fill='white'>✝</text></svg>" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+    <!-- ══ NAVIGATION ══ -->
+    <nav id="navbar" aria-label="Main Navigation">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="El Shaddai Church Home">
+                <div class="nav-logo-icon" aria-hidden="true">✝</div>
+                <div class="nav-logo-text">
+                    <div class="church-name">El Shaddai Church</div>
+                    <div class="church-location">Aberdeen, Scotland</div>
+                </div>
+            </a>
+            <ul class="nav-links" role="list">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="about.html" aria-haspopup="true" aria-expanded="false">About ▾</a>
+                    <ul class="dropdown-menu" role="list">
+                        <li><a href="about.html">Leadership</a></li>
+                        <li><a href="about.html#expect">What to Expect</a></li>
+                        <li><a href="about.html#faith">Declaration of Faith</a></li>
+                    </ul>
+                </li>
+                <li><a href="ministries.html">Ministries</a></li>
+                <li><a href="sermons.html" class="active">Sermons</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html#visit" class="nav-cta">Plan Your Visit</a></li>
+            </ul>
+            <button id="hamburger" class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false"
+                aria-controls="mobileNav">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div id="mobileNav" class="mobile-nav" role="navigation">
+            <a href="index.html">🏠 Home</a>
+            <a href="about.html">✝ About Us</a>
+            <a href="ministries.html">👥 Ministries</a>
+            <a href="sermons.html" class="text-primary">🎙 Sermons</a>
+            <a href="events.html">📅 Events</a>
+            <a href="contact.html">📬 Contact</a>
+            <a href="contact.html#visit" class="btn btn-primary btn-sm mt-3 inline-block">Plan Your Visit</a>
+        </div>
+    </nav>
+
+    <!-- ══ PAGE HEADER ══ -->
+    <header class="page-header" role="banner" aria-labelledby="page-title">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <i class="fa-solid fa-chevron-right text-xs opacity-60" aria-hidden="true"></i>
+            <span>Sermons</span>
+        </nav>
+        <h1 id="page-title">Sermons & Messages</h1>
+        <p>Be transformed by the renewing of your mind through God's living Word.</p>
+    </header>
+
+    <!-- ══ FEATURED SERMON ══ -->
+    <section class="section" id="featured" aria-labelledby="featured-title">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">Now Playing</span>
+                <h2 id="featured-title" class="section-title">Latest Sermon</h2>
+                <div class="accent-divider"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-5 gap-10 items-start fade-in">
+                <!-- Video -->
+                <div class="lg:col-span-3">
+                    <div class="sermon-video-wrapper shadow-xl rounded-xl overflow-hidden">
+                        <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=ElShaddaiAberdeen&index=1"
+                            title="Latest Sermon – El Shaddai Church Aberdeen"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Details -->
+                <div class="lg:col-span-2">
+                    <span class="tag tag-gold mb-3">Latest Message</span>
+                    <h3 class="font-poppins font-bold text-2xl mb-3">Recent Sunday Message</h3>
+                    <p class="text-church-light leading-relaxed mb-4">
+                        Join Rev. Angeline S. Henry and our guest ministers for life-changing messages
+                        from the Word of God. Each Sunday brings a fresh word to encourage, equip,
+                        and transform your life.
+                    </p>
+
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-4 mb-5">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fa-solid fa-church text-primary" aria-hidden="true"></i>
+                            <span class="font-poppins font-semibold text-sm">El Shaddai Church Aberdeen</span>
+                        </div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fa-solid fa-calendar text-primary" aria-hidden="true"></i>
+                            <span class="text-sm text-church-light">Every Sunday 10:30 AM</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-brands fa-youtube text-red-500" aria-hidden="true"></i>
+                            <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank"
+                                rel="noopener noreferrer" class="text-sm text-primary font-semibold hover:underline">
+                                Subscribe on YouTube
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-primary" id="subscribe-youtube-btn">
+                            <i class="fa-brands fa-youtube mr-1" aria-hidden="true"></i>
+                            Subscribe on YouTube
+                        </a>
+                        <a href="#series" class="btn btn-outline-dark" id="browse-series-btn">
+                            <i class="fa-solid fa-list mr-1" aria-hidden="true"></i>
+                            Browse Sermon Series
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ SERMON SERIES / PLAYLISTS ══ -->
+    <section class="section pattern-bg" id="series" aria-labelledby="series-title">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">Categories</span>
+                <h2 id="series-title" class="section-title">Sermon Series</h2>
+                <div class="accent-divider"></div>
+                <p class="section-subtitle">Watch our curated series on specific themes and books of the Bible.</p>
+            </div>
+
+            <div class="sermon-grid stagger">
+
+                <!-- Series 1 – Playlist Embed -->
+                <article class="card" aria-labelledby="series1-title">
+                    <div class="sermon-video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/videoseries?list=PLbpi6ZahtOH6Ar_3GPy3workd09_Pz6OS"
+                            title="Faith and Prayer Sermon Series"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="card-body">
+                        <span class="tag tag-blue mb-2">Sermon Series</span>
+                        <h3 id="series1-title" class="font-poppins font-bold text-lg mb-2">Faith & Prayer</h3>
+                        <p class="text-church-light text-sm">A series exploring the foundations of faith and the power
+                            of prayer in the believer's life.</p>
+                        <div class="flex items-center gap-2 mt-3 text-xs text-church-light">
+                            <i class="fa-solid fa-film" aria-hidden="true"></i>
+                            <span>Multiple messages</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Series 2 -->
+                <article class="card" aria-labelledby="series2-title">
+                    <div class="sermon-video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/videoseries?list=PLbpi6ZahtOH6Ar_3GPy3workd09_Pz6OS&index=2"
+                            title="Identity in Christ Sermon Series"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="card-body">
+                        <span class="tag tag-gold mb-2">Sermon Series</span>
+                        <h3 id="series2-title" class="font-poppins font-bold text-lg mb-2">Identity in Christ</h3>
+                        <p class="text-church-light text-sm">Discover who you are in Christ and walk confidently in the
+                            fullness of His purpose for your life.</p>
+                        <div class="flex items-center gap-2 mt-3 text-xs text-church-light">
+                            <i class="fa-solid fa-film" aria-hidden="true"></i>
+                            <span>Multiple messages</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Series 3 -->
+                <article class="card" aria-labelledby="series3-title">
+                    <div class="sermon-video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/videoseries?list=PLbpi6ZahtOH6Ar_3GPy3workd09_Pz6OS&index=3"
+                            title="The Holy Spirit Sermon Series"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="card-body">
+                        <span class="tag tag-blue mb-2">Sermon Series</span>
+                        <h3 id="series3-title" class="font-poppins font-bold text-lg mb-2">The Holy Spirit</h3>
+                        <p class="text-church-light text-sm">Understanding the person, work, and gifts of the Holy
+                            Spirit in the life of every believer.</p>
+                        <div class="flex items-center gap-2 mt-3 text-xs text-church-light">
+                            <i class="fa-solid fa-film" aria-hidden="true"></i>
+                            <span>Multiple messages</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-primary" id="youtube-all-sermons-btn">
+                    <i class="fa-brands fa-youtube mr-2" aria-hidden="true"></i>
+                    Watch All Sermons on YouTube
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ STAY INSPIRED ══ -->
+    <section class="section" aria-label="Stay inspired call to action">
+        <div class="container max-w-3xl text-center fade-in">
+            <div class="text-6xl mb-4" aria-hidden="true">📻</div>
+            <h2 class="font-poppins font-bold text-2xl mb-3">Never Miss a Message</h2>
+            <p class="text-church-light mb-6">
+                Subscribe to our YouTube channel to get notified every time we upload a new sermon.
+                You can also follow us on our social media pages for short devotional clips and updates.
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-primary" id="youtube-subscribe-btn">
+                    <i class="fa-brands fa-youtube mr-1" aria-hidden="true"></i> YouTube
+                </a>
+                <a href="https://www.facebook.com/elshaddaichurch/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-outline-dark" id="facebook-btn">
+                    <i class="fa-brands fa-facebook-f mr-1" aria-hidden="true"></i> Facebook
+                </a>
+                <a href="https://www.instagram.com/elshaddaichurchaberdeen/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-outline-dark" id="instagram-btn">
+                    <i class="fa-brands fa-instagram mr-1" aria-hidden="true"></i> Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ PRAYER REQUEST CTA ══ -->
+    <section class="section" style="background: linear-gradient(135deg, #0f1e35 0%, #1a3a6b 60%, #2660a8 100%);"
+        aria-label="Prayer request">
+        <div class="container max-w-3xl text-center">
+            <div class="fade-in">
+                <div class="text-6xl mb-4" aria-hidden="true">🙏</div>
+                <span class="section-badge" style="background:rgba(201,162,39,0.2);color:#f0c842;">Prayer</span>
+                <h2 class="font-poppins font-bold text-2xl md:text-3xl text-white mt-4 mb-3">Need Prayer?</h2>
+                <div class="accent-divider mx-auto"></div>
+                <p class="text-white/75 mb-8 max-w-xl mx-auto mt-4">
+                    We believe in the power of prayer. If you have a prayer request — personal, family,
+                    or otherwise — our prayer team would be honoured to stand with you before God.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="contact.html?subject=prayer" class="btn btn-accent" id="prayer-request-btn">
+                        <i class="fa-solid fa-hands-praying mr-1" aria-hidden="true"></i>
+                        Submit a Prayer Request
+                    </a>
+                    <a href="contact.html" class="btn btn-outline" id="sermon-contact-btn">
+                        <i class="fa-solid fa-envelope mr-1" aria-hidden="true"></i>
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-grid">
+            <div>
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="nav-logo-icon" aria-hidden="true">✝</div>
+                    <div>
+                        <div class="footer-logo-text">El Shaddai Church</div>
+                        <div class="footer-tagline">Aberdeen, Scotland</div>
+                    </div>
+                </div>
+                <p class="footer-desc">A vibrant, Spirit-filled community committed to worshipping God, growing in
+                    faith, and serving our city with the love of Jesus Christ.</p>
+                <div class="social-links" aria-label="Social media links">
+                    <a href="https://www.facebook.com/elshaddaichurch/" target="_blank" rel="noopener noreferrer"
+                        class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"
+                            aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/elshaddaichurchaberdeen/" target="_blank"
+                        rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank" rel="noopener noreferrer"
+                        class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"
+                            aria-hidden="true"></i></a>
+                    <a href="mailto:info@elshaddaichurch.org.uk" class="social-link" aria-label="Email"><i
+                            class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="ministries.html">Ministries</a></li>
+                    <li><a href="sermons.html">Sermons</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Service Times</h4>
+                <div class="service-time">
+                    <div class="service-time-dot" aria-hidden="true"></div>
+                    <div>
+                        <div class="text-white text-sm font-semibold font-poppins">Sunday Worship</div>
+                        <div class="text-white/50 text-xs">10:30 AM</div>
+                    </div>
+                </div>
+                <div class="service-time">
+                    <div class="service-time-dot" aria-hidden="true"></div>
+                    <div>
+                        <div class="text-white text-sm font-semibold font-poppins">Bible Study</div>
+                        <div class="text-white/50 text-xs">Wednesday 7:00 PM</div>
+                    </div>
+                </div>
+                <div class="service-time">
+                    <div class="service-time-dot" aria-hidden="true"></div>
+                    <div>
+                        <div class="text-white text-sm font-semibold font-poppins">Prayer Meeting</div>
+                        <div class="text-white/50 text-xs">Friday 7:00 PM</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>Stay Connected</h4>
+                <form id="newsletterForm" aria-label="Newsletter signup">
+                    <div class="newsletter-form">
+                        <label for="newsletter-email" class="sr-only">Email address</label>
+                        <input type="email" id="newsletter-email" class="newsletter-input" placeholder="your@email.com"
+                            required autocomplete="email" />
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 El Shaddai Church Aberdeen. All rights reserved.</p>
+            <p>Made with ❤️ for God's glory</p>
+        </div>
+    </footer>
+
+    <button id="scrollTop" aria-label="Scroll back to top"><i class="fa-solid fa-chevron-up"
+            aria-hidden="true"></i></button>
+    <script src="js/main.js" defer></script>
+    <script src="js/animations.js" defer></script>
+</body>
+
+</html>
