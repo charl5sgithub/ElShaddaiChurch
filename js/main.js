@@ -219,6 +219,73 @@ function prefillFromURLParams() {
     }
 }
 
+// ── Ministry Modal ──
+function initMinistryModal() {
+    const modal = document.getElementById('ministryModal');
+    const triggers = document.querySelectorAll('.ministry-trigger');
+    const closeBtn = document.getElementById('closeModal');
+    const overlay = document.getElementById('modalOverlay');
+
+    if (!modal || !triggers.length || !closeBtn || !overlay) return;
+
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDescription');
+    const modalLeader = document.getElementById('modalLeader');
+    const modalSchedule = document.getElementById('modalSchedule');
+    const modalImg = document.getElementById('modalImage');
+    const modalFallback = document.getElementById('modalImageFallback');
+
+    const openModal = (el) => {
+        const { title, description, leader, schedule, image } = el.dataset;
+
+        if (modalTitle) modalTitle.textContent = title || '';
+        if (modalDesc) modalDesc.textContent = description || '';
+        if (modalLeader) modalLeader.textContent = leader || '';
+        if (modalSchedule) modalSchedule.textContent = schedule || '';
+
+        if (modalImg) {
+            if (image) {
+                modalImg.src = image;
+                modalImg.classList.remove('hidden');
+                if (modalFallback) modalFallback.classList.add('hidden');
+            } else {
+                modalImg.classList.add('hidden');
+                if (modalFallback) {
+                    modalFallback.classList.remove('hidden');
+                    modalFallback.textContent = el.querySelector('.ministry-card-img span')?.textContent || '✝';
+                }
+            }
+        }
+
+        modal.classList.remove('hidden');
+        // Force reflow
+        void modal.offsetWidth;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('active');
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }, 300);
+    };
+
+    triggers.forEach((trigger) => {
+        trigger.addEventListener('click', () => openModal(trigger));
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+}
+
 // ── Initialise on DOM ready ──
 document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
@@ -231,4 +298,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initDropdowns();
     prefillFromURLParams();
+    initMinistryModal();
 });
