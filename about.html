@@ -2,486 +2,208 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us – El Shaddai Church Aberdeen</title>
-    <meta name="description"
-        content="Learn about El Shaddai Church Aberdeen – our leadership team, what you can expect when you visit, and our declaration of faith." />
-    <link rel="canonical" href="https://elshaddaichurch.org.uk/about.html" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – El Shaddai Church Aberdeen</title>
+  <meta name="description"
+    content="Learn about El Shaddai Church Aberdeen – our leadership team, what you can expect when you visit, and our declaration of faith." />
+  <link rel="canonical" href="https://elshaddaichurch.org.uk/about.html" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap"
-        rel="stylesheet" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#4DA6FF', 'primary-dark': '#2980d9',
-                        accent: '#C9A227', 'accent-dark': '#a8841e',
-                        church: { text: '#333333', light: '#666666', bg: '#F5F7FA' }
-                    },
-                    fontFamily: { poppins: ['Poppins', 'sans-serif'], sans: ['Open Sans', 'sans-serif'] }
-                }
-            }
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563EB',
+            'primary-dark': '#1D4ED8',
+            accent: '#D4AF37',
+            'accent-dark': '#B8860B',
+            dark: '#1F2937'
+          },
+          fontFamily: {
+            montserrat: ['Montserrat', 'sans-serif'],
+            sans: ['Open Sans', 'sans-serif']
+          }
         }
-    </script>
+      }
+    }
+  </script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%234DA6FF'/><text y='.9em' font-size='70' x='15' fill='white'>✝</text></svg>" />
-    <link rel="stylesheet" href="css/styles.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/church-logo.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/church-logo.png" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-<body>
+<body class="font-sans text-dark bg-slate-50">
 
-    <!-- ══ NAVIGATION ══ -->
-    <nav id="navbar" aria-label="Main Navigation">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo" aria-label="El Shaddai Church Home">
-                <img src="images/church-logo.png" class="h-10 w-auto" alt="Church Logo">
-                <div class="nav-logo-text">
-                    <div class="church-name">El Shaddai Church</div>
-                    <div class="church-location">Aberdeen, Scotland</div>
-                </div>
-            </a>
-            <ul class="nav-links" role="list">
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="about.html" class="active" aria-haspopup="true" aria-expanded="false">About ▾</a>
-                    <ul class="dropdown-menu" role="list">
-                        <li><a href="about.html">Leadership</a></li>
-                        <li><a href="about.html#expect">What to Expect</a></li>
-                        <li><a href="about.html#faith">Declaration of Faith</a></li>
-                    </ul>
-                </li>
-                <li><a href="ministries.html">Ministries</a></li>
-                <li><a href="sermons.html">Sermons</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="contact.html#visit" class="nav-cta">Plan Your Visit</a></li>
-            </ul>
-            <button id="hamburger" class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false"
-                aria-controls="mobileNav">
-                <span></span><span></span><span></span>
-            </button>
+  <!-- ══ NAVIGATION ══ -->
+  <nav id="navbar" aria-label="Main Navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="El Shaddai Church Home">
+        <img src="images/church-logo.png" alt="El Shaddai Church Logo">
+        <div class="logo-text-stack">
+          <span class="church-name">El Shaddai Church</span>
+          <span class="church-location">Aberdeen, Scotland</span>
         </div>
-        <div id="mobileNav" class="mobile-nav" role="navigation" aria-label="Mobile Navigation">
-            <a href="index.html">🏠 Home</a>
-            <a href="about.html" class="text-primary">✝ About Us</a>
-            <a href="about.html#expect">🙏 What to Expect</a>
-            <a href="about.html#faith">📖 Declaration of Faith</a>
-            <a href="ministries.html">👥 Ministries</a>
-            <a href="sermons.html">🎙 Sermons</a>
-            <a href="events.html">📅 Events</a>
-            <a href="contact.html">📬 Contact</a>
-            <a href="contact.html#visit" class="btn btn-primary btn-sm mt-3 inline-block">Plan Your Visit</a>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="ministries.html">Ministries</a></li>
+        <li><a href="sermons.html">Sermons</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="bookings.html">Bookings</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══ PAGE HEADER ══ -->
+  <header class="relative pt-48 pb-24 bg-dark text-white text-center overflow-hidden">
+    <div class="absolute inset-0 opacity-40 bg-[url('images/pastor.png')] bg-cover bg-center"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-dark/60 to-dark"></div>
+    <div class="container relative z-10">
+      <nav class="flex justify-center gap-2 mb-6 text-xs uppercase tracking-[0.3em] opacity-60">
+        <a href="index.html" class="hover:text-accent">Home</a>
+        <span>/</span>
+        <span class="text-accent">About Us</span>
+      </nav>
+      <h1 class="font-montserrat text-4xl md:text-6xl font-bold mb-4">Our Heart & Mission</h1>
+      <p class="text-gray-300 max-w-2xl mx-auto text-lg">Discover the vision that drives us and the family that makes El Shaddai Church a home away from home.</p>
+    </div>
+  </header>
+
+  <!-- ══ LEADERSHIP ══ -->
+  <section class="section">
+    <div class="container">
+      <div class="grid lg:grid-cols-2 gap-16 items-center reveal">
+        <div>
+          <span class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block">Our Servant Leaders</span>
+          <h2 class="font-montserrat font-bold text-4xl mb-8">Rev. Angeline S. Henry</h2>
+          <div class="prose prose-lg text-gray-600 space-y-4">
+            <p>Greetings in the precious name of our Lord and Saviour Jesus Christ! I am honoured to welcome you to our community.</p>
+            <p>El Shaddai Church Aberdeen was founded on a vision to see lives transformed by the power of God's Word and the warmth of His love. We believe that everyone who walks through our doors is there by divine appointment.</p>
+            <blockquote class="border-l-4 border-primary pl-6 italic font-medium my-8 text-dark">
+              "Our mission is simple: to know God more deeply and to make Him known more widely in our beautiful city of Aberdeen."
+            </blockquote>
+            <p>Whether you're exploring faith for the first time or looking for a place to call home, there is a seat at the table for you here.</p>
+          </div>
+          <div class="mt-10">
+             <img src="https://signature.freeformatter.com/signatures/1/angeline-henry.png" alt="Signature" class="h-16 opacity-30 grayscale">
+             <p class="font-bold mt-2">Senior Pastor</p>
+          </div>
         </div>
-    </nav>
-
-    <!-- ══ PAGE HEADER ══ -->
-    <header class="page-header" role="banner" aria-labelledby="page-title">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <a href="index.html">Home</a>
-            <i class="fa-solid fa-chevron-right text-xs opacity-60" aria-hidden="true"></i>
-            <span>About Us</span>
-        </nav>
-        <h1 id="page-title">About El Shaddai Church</h1>
-        <p>Get to know our vision, our leaders, and what makes us who we are.</p>
-    </header>
-
-    <!-- ══ LEADERSHIP / PASTOR ══ -->
-    <section class="section" id="leadership" aria-labelledby="leadership-title">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-badge">Leadership</span>
-                <h2 id="leadership-title" class="section-title">Meet Our Pastor</h2>
-                <div class="accent-divider"></div>
-                <p class="section-subtitle">Shepherding our congregation with wisdom, love, and faith.</p>
-            </div>
-
-            <div class="pastor-section">
-                <!-- Message from Pastor -->
-                <div class="fade-in-left">
-                    <span class="section-badge" style="margin-left:0;">A Word from the Pastor</span>
-                    <h2 class="font-poppins font-bold text-3xl mt-3 mb-2">Rev. Angeline S. Henry</h2>
-                    <p class="text-primary font-poppins font-semibold mb-6">Senior Pastor, El Shaddai Church Aberdeen
-                    </p>
-
-                    <p class="text-church-light leading-relaxed mb-4">
-                        Greetings in the risen name of our Lord and Saviour Jesus Christ!
-                    </p>
-                    <p class="text-church-light leading-relaxed mb-4">
-                        I thank God for giving us the opportunity to come together in person and worship the
-                        living God together. There is something uniquely powerful about gathering as one body,
-                        lifting our voices and hearts in praise and adoration.
-                    </p>
-
-                    <blockquote class="pastor-quote" aria-label="Scripture quote">
-                        "How good and how pleasant it is for brethren to dwell together in unity."
-                        <br /><strong>– Psalm 133:1</strong>
-                    </blockquote>
-
-                    <p class="text-church-light leading-relaxed mb-4">
-                        Thank you for visiting our site. I pray that this will be a life-transforming experience
-                        for you as it has been for many who have walked through our doors. Whether you are
-                        searching for God, or simply looking for a church family to belong to, you are in the
-                        right place.
-                    </p>
-                    <p class="text-church-light leading-relaxed mb-6">
-                        Our church is built on the Word of God and powered by the Holy Spirit. We believe
-                        every person is valuable, loved by God, and created with a unique purpose.
-                        Come and discover yours with us.
-                    </p>
-
-                    <div class="pastor-signature" aria-label="Pastor signature">
-                        God Bless,<br />
-                        <span class="text-accent text-xl italic">Rev. Angeline S. Henry</span>
-                    </div>
-                </div>
-
-                <!-- Pastor Photo -->
-                <div class="fade-in-right">
-                    <div class="pastor-photo-wrapper">
-                        <img src="images/pastor.png"
-                            alt="Rev. Angeline S. Henry – Senior Pastor of El Shaddai Church Aberdeen" width="600"
-                            height="750" loading="lazy" />
-                        <div class="absolute bottom-0 left-0 right-0 p-5 rounded-b-2xl"
-                            style="background: linear-gradient(to top, rgba(15,30,53,0.85), transparent);">
-                            <p class="text-white font-poppins font-bold text-lg leading-tight">Rev. Angeline S. Henry
-                            </p>
-                            <p class="text-white/70 text-sm">Senior Pastor</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Leadership Team -->
-            <div class="mt-24">
-                <div class="section-header fade-in">
-                    <span class="section-badge">Our Team</span>
-                    <h2 class="section-title">Church Leadership</h2>
-                    <div class="accent-divider"></div>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-8 stagger">
-                    <div class="card text-center">
-                        <div class="h-32 flex items-center justify-center text-6xl"
-                            style="background: linear-gradient(135deg, rgba(77,166,255,0.1), rgba(77,166,255,0.05));"
-                            aria-hidden="true">🧑‍💼</div>
-                        <div class="card-body">
-                            <h3 class="font-poppins font-bold text-lg mb-1">Rev. Angeline S. Henry</h3>
-                            <p class="text-primary font-semibold text-sm mb-3">Senior Pastor</p>
-                            <p class="text-church-light text-sm">Leading El Shaddai Church with vision, compassion, and
-                                a heart for God's people.</p>
-                        </div>
-                    </div>
-
-                    <div class="card text-center">
-                        <div class="h-32 flex items-center justify-center text-6xl"
-                            style="background: linear-gradient(135deg, rgba(201,162,39,0.1), rgba(201,162,39,0.05));"
-                            aria-hidden="true">🙏</div>
-                        <div class="card-body">
-                            <h3 class="font-poppins font-bold text-lg mb-1">Elder Team</h3>
-                            <p class="text-accent font-semibold text-sm mb-3">Church Elders</p>
-                            <p class="text-church-light text-sm">Our elders provide spiritual oversight, pastoral care,
-                                and wise counsel to the congregation.</p>
-                        </div>
-                    </div>
-
-                    <div class="card text-center">
-                        <div class="h-32 flex items-center justify-center text-6xl"
-                            style="background: linear-gradient(135deg, rgba(46,204,113,0.1), rgba(46,204,113,0.05));"
-                            aria-hidden="true">💼</div>
-                        <div class="card-body">
-                            <h3 class="font-poppins font-bold text-lg mb-1">Deacon Board</h3>
-                            <p class="font-semibold text-sm mb-3" style="color: #27ae60;">Deacons</p>
-                            <p class="text-church-light text-sm">Serving the practical needs of our congregation and
-                                supporting the ministry of the church.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="relative">
+          <div class="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl relative z-10">
+            <img src="images/pastor.png" alt="Rev. Angeline S. Henry" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl -z-0"></div>
+          <div class="absolute -top-10 -left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-0"></div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- ══ WHAT CAN I EXPECT ══ -->
-    <section class="section pattern-bg" id="expect" aria-labelledby="expect-title">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-badge">First Visit</span>
-                <h2 id="expect-title" class="section-title">What Can I Expect?</h2>
-                <div class="accent-divider"></div>
-                <p class="section-subtitle">We want you to feel at home from the moment you walk through our doors.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-5 stagger max-w-4xl mx-auto">
-                <div class="expect-item" role="listitem">
-                    <div class="expect-icon" aria-hidden="true">🕊️</div>
-                    <div>
-                        <h3 class="font-poppins font-semibold text-base mb-1">The Presence of God's Spirit</h3>
-                        <p class="text-church-light text-sm">Experience genuine, Spirit-filled worship that will refresh
-                            and renew your soul.</p>
-                    </div>
-                </div>
-
-                <div class="expect-item" role="listitem">
-                    <div class="expect-icon" aria-hidden="true">❤️</div>
-                    <div>
-                        <h3 class="font-poppins font-semibold text-base mb-1">The Warm Love of Fellow Believers</h3>
-                        <p class="text-church-light text-sm">From the moment you arrive, you'll be greeted with genuine
-                            warmth and friendship.</p>
-                    </div>
-                </div>
-
-                <div class="expect-item" role="listitem">
-                    <div class="expect-icon" aria-hidden="true">🤝</div>
-                    <div>
-                        <h3 class="font-poppins font-semibold text-base mb-1">Comforting Support of Brothers & Sisters
-                        </h3>
-                        <p class="text-church-light text-sm">A community that walks alongside you through every season
-                            of life.</p>
-                    </div>
-                </div>
-
-                <div class="expect-item" role="listitem">
-                    <div class="expect-icon" aria-hidden="true">🌱</div>
-                    <div>
-                        <h3 class="font-poppins font-semibold text-base mb-1">Encouragement for Spiritual Growth</h3>
-                        <p class="text-church-light text-sm">Bible studies, small groups, and mentorship to help you
-                            grow deeper in faith.</p>
-                    </div>
-                </div>
-
-                <div class="expect-item" role="listitem">
-                    <div class="expect-icon" aria-hidden="true">📈</div>
-                    <div>
-                        <h3 class="font-poppins font-semibold text-base mb-1">Growth in Relationship with God</h3>
-                        <p class="text-church-light text-sm">Through prayer, worship, and the Word, you'll experience a
-                            deeper walk with Jesus.</p>
-                    </div>
-                </div>
-
-                <div class="expect-item" role="listitem">
-                    <div class="expect-icon" aria-hidden="true">🪙</div>
-                    <div>
-                        <h3 class="font-poppins font-semibold text-base mb-1">Dignity and Respect</h3>
-                        <p class="text-church-light text-sm">Every person is treated with honour and respect, regardless
-                            of background or story.</p>
-                    </div>
-                </div>
-
-                <div class="expect-item md:col-span-2" role="listitem">
-                    <div class="expect-icon" aria-hidden="true">🌍</div>
-                    <div>
-                        <h3 class="font-poppins font-semibold text-base mb-1">A Church Committed to Prayer & Community
-                        </h3>
-                        <p class="text-church-light text-sm">We are a praying church that actively serves our local
-                            community and the wider world through outreach, missions, and intercession.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-10">
-                <a href="contact.html#visit" class="btn btn-primary" id="expect-visit-btn">
-                    <i class="fa-solid fa-calendar-check mr-2" aria-hidden="true"></i>
-                    Plan Your First Visit
-                </a>
-            </div>
+  <!-- ══ CORE VALUES ══ -->
+  <section class="section bg-slate-50">
+    <div class="container text-center">
+      <h2 class="section-title reveal">Declaration of Faith</h2>
+      <div class="grid md:grid-cols-3 gap-8 stagger">
+        <div class="bg-white p-10 rounded-[2.5rem] shadow-premium reveal card-hover-effect border border-gray-50">
+          <div class="text-4xl mb-6">📖</div>
+          <h3 class="font-montserrat font-bold text-xl mb-4">The Holy Bible</h3>
+          <p class="text-gray-500 text-sm">We believe the Bible is the inspired, infallible Word of God — our ultimate authority for faith and conduct.</p>
         </div>
-    </section>
-
-    <!-- ══ DECLARATION OF FAITH ══ -->
-    <section class="section" id="faith" aria-labelledby="faith-title">
-        <div class="container max-w-4xl">
-            <div class="section-header fade-in">
-                <span class="section-badge">What We Believe</span>
-                <h2 id="faith-title" class="section-title">Declaration of Faith</h2>
-                <div class="accent-divider"></div>
-                <p class="section-subtitle">The core beliefs that anchor and guide everything we do.</p>
-            </div>
-
-            <div class="grid gap-6 stagger">
-                <div class="faith-card">
-                    <div class="faith-icon"
-                        style="background: linear-gradient(135deg,rgba(77,166,255,0.15),rgba(77,166,255,0.05));">✝️
-                    </div>
-                    <h3 class="font-poppins font-bold text-lg mb-2">The Holy Trinity</h3>
-                    <p class="text-church-light leading-relaxed">
-                        We believe in the Holy Trinity: God the Father, God the Son, and God the Holy Spirit —
-                        three distinct persons, one God, co-equal and co-eternal.
-                    </p>
-                    <p class="text-xs text-primary mt-3 font-semibold">Matthew 28:19 · 2 Corinthians 13:14</p>
-                </div>
-
-                <div class="faith-card">
-                    <div class="faith-icon"
-                        style="background: linear-gradient(135deg,rgba(201,162,39,0.15),rgba(201,162,39,0.05));">👑
-                    </div>
-                    <h3 class="font-poppins font-bold text-lg mb-2">Jesus Christ – Lord and Saviour</h3>
-                    <p class="text-church-light leading-relaxed">
-                        We believe Jesus Christ is the Son of God who became flesh, died for our sins,
-                        was buried, and rose again on the third day. He is the only way to salvation
-                        and the head of the Church.
-                    </p>
-                    <p class="text-xs text-primary mt-3 font-semibold">John 3:16 · Romans 10:9 · 1 Corinthians 15:3-4
-                    </p>
-                </div>
-
-                <div class="faith-card">
-                    <div class="faith-icon"
-                        style="background: linear-gradient(135deg,rgba(46,204,113,0.15),rgba(46,204,113,0.05));">📖
-                    </div>
-                    <h3 class="font-poppins font-bold text-lg mb-2">The Holy Scriptures</h3>
-                    <p class="text-church-light leading-relaxed">
-                        We believe the Bible is the inspired, infallible Word of God — the ultimate
-                        authority for all matters of faith and conduct. It is living, active, and
-                        transformative.
-                    </p>
-                    <p class="text-xs text-primary mt-3 font-semibold">2 Timothy 3:16-17 · Hebrews 4:12</p>
-                </div>
-
-                <div class="faith-card">
-                    <div class="faith-icon"
-                        style="background: linear-gradient(135deg,rgba(155,89,182,0.15),rgba(155,89,182,0.05));">🔥
-                    </div>
-                    <h3 class="font-poppins font-bold text-lg mb-2">The Holy Spirit</h3>
-                    <p class="text-church-light leading-relaxed">
-                        We believe in the ministry and gifts of the Holy Spirit. Every believer can be
-                        filled with the Spirit, empowered for service, and led by Him in daily life.
-                    </p>
-                    <p class="text-xs text-primary mt-3 font-semibold">Acts 2:38 · 1 Corinthians 12:4-11 · Galatians
-                        5:22-23</p>
-                </div>
-
-                <div class="faith-card">
-                    <div class="faith-icon"
-                        style="background: linear-gradient(135deg,rgba(231,76,60,0.15),rgba(231,76,60,0.05));">💒</div>
-                    <h3 class="font-poppins font-bold text-lg mb-2">The Universal Church</h3>
-                    <p class="text-church-light leading-relaxed">
-                        We believe in the universal church as the body of Christ, made up of all believers
-                        across denominational lines who have committed their lives to Jesus Christ as Lord
-                        and Saviour.
-                    </p>
-                    <p class="text-xs text-primary mt-3 font-semibold">1 Corinthians 12:27 · Ephesians 1:22-23</p>
-                </div>
-
-                <div class="faith-card">
-                    <div class="faith-icon"
-                        style="background: linear-gradient(135deg,rgba(52,152,219,0.15),rgba(52,152,219,0.05));">🌅
-                    </div>
-                    <h3 class="font-poppins font-bold text-lg mb-2">The Return of Jesus Christ</h3>
-                    <p class="text-church-light leading-relaxed">
-                        We believe in the physical, glorious return of Jesus Christ to judge the living
-                        and the dead, and to establish His eternal kingdom. This blessed hope motivates
-                        holy living and urgent mission.
-                    </p>
-                    <p class="text-xs text-primary mt-3 font-semibold">1 Thessalonians 4:16-17 · Revelation 22:12</p>
-                </div>
-            </div>
+        <div class="bg-white p-10 rounded-[2.5rem] shadow-premium reveal card-hover-effect border border-gray-50">
+          <div class="text-4xl mb-6">✝️</div>
+          <h3 class="font-montserrat font-bold text-xl mb-4">The Trinity</h3>
+          <p class="text-gray-500 text-sm">We believe in one God, eternally existent in three persons: Father, Son, and Holy Spirit.</p>
         </div>
-    </section>
-
-    <!-- ══ FOOTER ══ -->
-    <footer class="footer" role="contentinfo">
-        <div class="footer-grid">
-            <div>
-                <div class="flex items-center gap-3 mb-3">
-                    <img src="images/church-logo.png" class="h-10 w-auto" alt="Church Logo">
-                    <div>
-                        <div class="footer-logo-text">El Shaddai Church</div>
-                        <div class="footer-tagline">Aberdeen, Scotland</div>
-                    </div>
-                </div>
-                <p class="footer-desc">A vibrant, Spirit-filled community committed to worshipping God, growing in
-                    faith, and serving our city with the love of Jesus Christ.</p>
-                <div class="social-links" aria-label="Social media links">
-                    <a href="https://www.facebook.com/elshaddaichurch/" target="_blank" rel="noopener noreferrer"
-                        class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"
-                            aria-hidden="true"></i></a>
-                    <a href="https://www.instagram.com/elshaddaichurchaberdeen/" target="_blank"
-                        rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i
-                            class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-                    <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank" rel="noopener noreferrer"
-                        class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"
-                            aria-hidden="true"></i></a>
-                    <a href="mailto:info@elshaddaichurch.org.uk" class="social-link" aria-label="Email"><i
-                            class="fa-solid fa-envelope" aria-hidden="true"></i></a>
-                </div>
-            </div>
-            <div>
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="about.html#expect">What to Expect</a></li>
-                    <li><a href="about.html#faith">Declaration of Faith</a></li>
-                    <li><a href="ministries.html">Ministries</a></li>
-                    <li><a href="sermons.html">Sermons</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Service Times</h4>
-                <div class="service-time">
-                    <div class="service-time-dot" aria-hidden="true"></div>
-                    <div>
-                        <div class="text-white text-sm font-semibold font-poppins">Sunday Worship</div>
-                        <div class="text-white/50 text-xs">10:30 AM</div>
-                    </div>
-                </div>
-                <div class="service-time">
-                    <div class="service-time-dot" aria-hidden="true"></div>
-                    <div>
-                        <div class="text-white text-sm font-semibold font-poppins">Bible Study</div>
-                        <div class="text-white/50 text-xs">Wednesday 7:00 PM</div>
-                    </div>
-                </div>
-                <div class="service-time">
-                    <div class="service-time-dot" aria-hidden="true"></div>
-                    <div>
-                        <div class="text-white text-sm font-semibold font-poppins">Prayer Meeting</div>
-                        <div class="text-white/50 text-xs">Friday 7:00 PM</div>
-                    </div>
-                </div>
-                <div class="service-time">
-                    <div class="service-time-dot" style="background:var(--primary);" aria-hidden="true"></div>
-                    <div>
-                        <div class="text-white text-sm font-semibold font-poppins">Youth Service</div>
-                        <div class="text-white/50 text-xs">Saturday 5:00 PM</div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h4>Stay Connected</h4>
-                <p class="text-sm text-white/60 mb-3">Subscribe to receive our weekly newsletter and updates.</p>
-                <form id="newsletterForm" aria-label="Newsletter signup">
-                    <div class="newsletter-form">
-                        <label for="newsletter-email" class="sr-only">Email address</label>
-                        <input type="email" id="newsletter-email" class="newsletter-input" placeholder="your@email.com"
-                            required autocomplete="email" />
-                        <button type="submit" class="newsletter-btn">Subscribe</button>
-                    </div>
-                </form>
-                <p class="text-xs text-white/40 mt-2">No spam. Unsubscribe anytime.</p>
-            </div>
+        <div class="bg-white p-10 rounded-[2.5rem] shadow-premium reveal card-hover-effect border border-gray-50">
+          <div class="text-4xl mb-6">🕊️</div>
+          <h3 class="font-montserrat font-bold text-xl mb-4">Salvation</h3>
+          <p class="text-gray-500 text-sm">We believe that salvation is a gift from God, received through faith in Jesus Christ and His sacrifice.</p>
         </div>
-        <div class="footer-bottom">
-            <p>© 2026 El Shaddai Church Aberdeen. All rights reserved.</p>
-            <p>Made with ❤️ for God's glory | <a href="https://elshaddaichurch.org.uk"
-                    class="hover:text-white">elshaddaichurch.org.uk</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center gap-4 mb-6">
+            <img src="images/church-logo.png" alt="Logo" class="h-12 w-auto">
+            <h3 class="font-montserrat font-bold text-2xl tracking-tight">El Shaddai Church</h3>
+          </div>
+          <p class="text-gray-400 max-w-md mb-8">
+            A vibrant, Spirit-filled community in Aberdeen committed to worshipping God, growing in faith, and serving our city.
+          </p>
+          <div class="flex gap-4">
+            <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-youtube"></i></a>
+          </div>
         </div>
-    </footer>
+        
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="ministries.html">Ministries</a></li>
+            <li><a href="sermons.html">Sermons</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="bookings.html">Bookings</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4>Service Times</h4>
+          <ul>
+            <li>Sunday Worship – 10:30 AM</li>
+            <li>Wednesday Prayer – 7:00 PM</li>
+            <li>Friday Bible Study – 7:00 PM</li>
+            <li>Saturday Youth – 5:00 PM</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4>Contact Info</h4>
+          <ul>
+            <li>📍 Aberdeen, Scotland</li>
+            <li>📞 +44 (0) 1224 000000</li>
+            <li>✉️ info@elshaddaichurch.org.uk</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        &copy; 2026 El Shaddai Church Aberdeen. Made with ❤️ for God's glory.
+      </div>
+    </div>
+  </footer>
 
-    <button id="scrollTop" aria-label="Scroll back to top"><i class="fa-solid fa-chevron-up"
-            aria-hidden="true"></i></button>
-
-    <script src="js/main.js" defer></script>
-    <script src="js/animations.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>

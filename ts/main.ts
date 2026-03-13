@@ -1,9 +1,9 @@
 /**
  * El Shaddai Church – main.ts
- * Initialises all shared functionality across every page.
+ * Initialises all shared functionality for the premium redesign.
  */
 
-// ── Intersection Observer – Scroll Animations ────────────────────────────────
+// ── Intersection Observer – Reveal on Scroll ────────────────────────────────
 function initScrollAnimations(): void {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -13,214 +13,170 @@ function initScrollAnimations(): void {
         }
       });
     },
-    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
   );
 
-  const targets = document.querySelectorAll<HTMLElement>(
-    '.fade-in, .fade-in-left, .fade-in-right, .stagger'
-  );
+  const targets = document.querySelectorAll('.reveal');
   targets.forEach((el) => observer.observe(el));
 }
 
-// ── Navbar Scroll Shadow ─────────────────────────────────────────────────────
+// ── Navbar Behavior ─────────────────────────────────────────────────────────
 function initNavbar(): void {
   const navbar = document.getElementById('navbar');
   if (!navbar) return;
 
-  const handler = (): void => {
-    if (window.scrollY > 30) {
+  const handleScroll = (): void => {
+    if (window.scrollY > 50) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
     }
   };
-  window.addEventListener('scroll', handler, { passive: true });
-  handler();
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
 }
 
-// ── Mobile Hamburger ─────────────────────────────────────────────────────────
-function initHamburger(): void {
-  const hamburger = document.getElementById('hamburger') as HTMLButtonElement | null;
-  const mobileNav = document.getElementById('mobileNav');
-  if (!hamburger || !mobileNav) return;
+// ── Mobile Menu ─────────────────────────────────────────────────────────────
+function initMobileMenu(): void {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  
+  if (!hamburger || !navLinks) return;
 
   hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
     hamburger.classList.toggle('open');
-    mobileNav.classList.toggle('open');
-    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-    hamburger.setAttribute('aria-expanded', String(!expanded));
   });
 
-  // Close on link click
-  mobileNav.querySelectorAll('a').forEach((link) => {
+  // Close when link clicked
+  document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
       hamburger.classList.remove('open');
-      mobileNav.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
     });
   });
 }
 
-// ── Back to Top ──────────────────────────────────────────────────────────────
-function initScrollTop(): void {
-  const btn = document.getElementById('scrollTop');
-  if (!btn) return;
-
-  const toggle = (): void => {
-    btn.classList.toggle('show', window.scrollY > 400);
-  };
-  window.addEventListener('scroll', toggle, { passive: true });
-
-  btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-}
-
-// ── Active Nav Link ──────────────────────────────────────────────────────────
-function setActiveNavLink(): void {
-  const current = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll<HTMLAnchorElement>('.nav-links a').forEach((link) => {
-    const href = link.getAttribute('href') || '';
-    if (href === current) {
-      link.classList.add('active');
-    }
-  });
-}
-
-// ── Contact Form Handler ─────────────────────────────────────────────────────
-function initContactForm(): void {
-  const form = document.getElementById('contactForm') as HTMLFormElement | null;
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = form.querySelector<HTMLButtonElement>('button[type="submit"]');
-    if (!btn) return;
-
-    const originalText = btn.innerHTML;
-    btn.innerHTML = '✓ Message Sent! We'll be in touch soon.';
-    btn.disabled = true;
-    btn.style.background = 'linear-gradient(135deg,#27ae60,#2ecc71)';
-
-    setTimeout(() => {
-      btn.innerHTML = originalText;
-      btn.disabled = false;
-      btn.style.background = '';
-      form.reset();
-    }, 4000);
-  });
-}
-
-// ── Newsletter Form ──────────────────────────────────────────────────────────
-function initNewsletterForm(): void {
-  const form = document.getElementById('newsletterForm') as HTMLFormElement | null;
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const input = form.querySelector<HTMLInputElement>('input[type="email"]');
-    if (input) input.value = '';
-    const btn = form.querySelector<HTMLButtonElement>('button');
-    if (btn) {
-      const orig = btn.textContent;
-      btn.textContent = '✓ Subscribed!';
-      setTimeout(() => { btn.textContent = orig; }, 3000);
-    }
-  });
-}
-
-// ── Ministry Modal ───────────────────────────────────────────────────────────
+// ── Ministry Modal Logic ────────────────────────────────────────────────────
 function initMinistryModal(): void {
   const modal = document.getElementById('ministryModal');
-  const triggers = document.querySelectorAll<HTMLElement>('.ministry-trigger');
+  const modalContent = document.getElementById('modalContent');
+  const triggers = document.querySelectorAll('.ministry-trigger');
   const closeBtn = document.getElementById('closeModal');
-  const overlay = document.getElementById('modalOverlay');
+  
+  if (!modal || !modalContent || !closeBtn) return;
 
-  if (!modal || !triggers.length || !closeBtn || !overlay) return;
-
+  const modalImg = document.getElementById('modalImage') as HTMLImageElement;
   const modalTitle = document.getElementById('modalTitle');
   const modalDesc = document.getElementById('modalDescription');
   const modalLeader = document.getElementById('modalLeader');
   const modalSchedule = document.getElementById('modalSchedule');
-  const modalImg = document.getElementById('modalImage') as HTMLImageElement;
-  const modalFallback = document.getElementById('modalImageFallback');
 
-  const openModal = (el: HTMLElement): void => {
+  const openModal = (trigger: Element): void => {
+    const el = trigger as HTMLElement;
     const { title, description, leader, schedule, image } = el.dataset;
 
-    if (modalTitle) modalTitle.textContent = title ?? '';
-    if (modalDesc) modalDesc.textContent = description ?? '';
-    if (modalLeader) modalLeader.textContent = leader ?? '';
-    if (modalSchedule) modalSchedule.textContent = schedule ?? '';
-
-    if (modalImg) {
-      if (image) {
-        modalImg.src = image;
-        modalImg.classList.remove('hidden');
-        if (modalFallback) modalFallback.classList.add('hidden');
-      } else {
-        modalImg.classList.add('hidden');
-        if (modalFallback) {
-          modalFallback.classList.remove('hidden');
-          modalFallback.textContent = el.querySelector('.ministry-card-img span')?.textContent || '✝';
-        }
-      }
-    }
+    if (modalTitle) modalTitle.textContent = title || '';
+    if (modalDesc) modalDesc.textContent = description || '';
+    if (modalLeader) modalLeader.textContent = leader || '';
+    if (modalSchedule) modalSchedule.textContent = schedule || '';
+    if (modalImg && image) modalImg.src = image;
 
     modal.classList.remove('hidden');
-    // Force reflow for animation
-    void modal.offsetWidth;
-    modal.classList.add('active');
+    // Force browser to wait for 'hidden' removal before adding opacity for transition
+    setTimeout(() => {
+      modal.classList.add('opacity-100');
+      modalContent.classList.remove('scale-90');
+      modalContent.classList.add('scale-100');
+    }, 10);
+    
     document.body.style.overflow = 'hidden';
   };
 
   const closeModal = (): void => {
-    modal.classList.remove('active');
+    modal.classList.remove('opacity-100');
+    modalContent.classList.remove('scale-100');
+    modalContent.classList.add('scale-90');
+    
     setTimeout(() => {
       modal.classList.add('hidden');
       document.body.style.overflow = '';
     }, 300);
   };
 
-  triggers.forEach((trigger) => {
+  triggers.forEach(trigger => {
     trigger.addEventListener('click', () => openModal(trigger));
   });
 
   closeBtn.addEventListener('click', closeModal);
-  overlay.addEventListener('click', closeModal);
-
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+  
   // Close on Escape
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-      closeModal();
-    }
+    if (e.key === 'Escape') closeModal();
   });
 }
 
-// ── Initialise everything on DOM ready ───────────────────────────────────────
+// ── Back to Top ──────────────────────────────────────────────────────────────
+function initScrollTop(): void {
+  const button = document.getElementById('scrollTop');
+  if (!button) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+      button.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+      button.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+    } else {
+      button.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+      button.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+    }
+  }, { passive: true });
+
+  button.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// ── Smooth Anchor Scrolling ─────────────────────────────────────────────────
 function initSmoothScroll(): void {
-  document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach((anchor) => {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const href = anchor.getAttribute('href');
       if (!href || href === '#') return;
       const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        target.scrollIntoView({ behavior: 'smooth' });
       }
     });
   });
 }
 
-// ── Initialise everything on DOM ready ───────────────────────────────────────
+// ── Main Initializer ────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initNavbar();
-  initHamburger();
-  initScrollTop();
-  setActiveNavLink();
-  initContactForm();
-  initNewsletterForm();
-  initSmoothScroll();
+  initMobileMenu();
   initMinistryModal();
+  initScrollTop();
+  initSmoothScroll();
 });
+
+// Update active link
+const setActiveLink = () => {
+  const path = window.location.pathname;
+  const page = path.split("/").pop() || "index.html";
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    if (link.getAttribute('href') === page) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+};
+
+setActiveLink();
+window.addEventListener('popstate', setActiveLink);
