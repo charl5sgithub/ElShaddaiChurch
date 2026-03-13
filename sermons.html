@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sermons – El Shaddai Church Aberdeen</title>
   <meta name="description"
-    content="Watch and listen to powerful sermons from El Shaddai Church Aberdeen. Inspiring messages to transform your life." />
+    content="Watch our latest sermons from El Shaddai Church Aberdeen. Inspiring messages to transform your life, shared directly from our YouTube channel." />
   <link rel="canonical" href="https://elshaddaichurch.org.uk/sermons.html" />
 
   <!-- Fonts -->
@@ -55,10 +55,10 @@
   <nav id="navbar" aria-label="Main Navigation">
     <div class="nav-container">
       <a href="index.html" class="nav-logo" aria-label="El Shaddai Church Home">
-        <img src="images/church-logo.png" alt="El Shaddai Church Logo" class="h-10 w-auto">
-        <div class="hidden md:block">
-          <div class="font-montserrat font-bold text-lg leading-tight uppercase tracking-wider">El Shaddai</div>
-          <div class="text-[10px] text-gray-500 uppercase tracking-[0.2em]">Aberdeen, Scotland</div>
+        <img src="images/church-logo.png" alt="El Shaddai Church Logo">
+        <div class="logo-text-stack">
+          <span class="church-name">El Shaddai Church</span>
+          <span class="church-location">Aberdeen, Scotland</span>
         </div>
       </a>
       <ul class="nav-links" role="list">
@@ -95,12 +95,19 @@
     <div class="container">
       <div class="grid lg:grid-cols-12 gap-12 items-center">
         <div class="lg:col-span-8 reveal">
-          <div class="aspect-video bg-black rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-            <iframe class="w-full h-full" src="https://www.youtube.com/embed/_3tN34csVHU" frameborder="0" allowfullscreen></iframe>
-          </div>
+          <a href="https://www.youtube.com/watch?v=_3tN34csVHU" target="_blank" class="sermon-card group">
+            <div class="sermon-thumb-wrapper bg-black">
+              <img src="https://img.youtube.com/vi/_3tN34csVHU/maxresdefault.jpg" alt="Faith Over Fear" class="sermon-thumb opacity-90">
+              <div class="play-overlay opacity-100 bg-transparent">
+                <div class="play-button shadow-2xl">
+                  <i class="fa-solid fa-play ml-1"></i>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
         <div class="lg:col-span-4 reveal">
-          <span class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block">Latest Message</span>
+          <span class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block">Most Recent Message</span>
           <h2 class="font-montserrat font-bold text-3xl md:text-4xl mb-6 leading-tight">Faith Over Fear in Challenging Seasons</h2>
           <p class="text-gray-600 mb-8 leading-relaxed">
             In this powerful message, Rev. Angeline S. Henry shares how we can stand strong on God's promises even when the world around us feels uncertain. Discover the peace that surpasses understanding.
@@ -114,54 +121,75 @@
               <div class="text-sm text-gray-500">Sunday Service · Feb 26, 2026</div>
             </div>
           </div>
-          <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank" class="btn btn-primary w-full justify-center">
-            <i class="fa-brands fa-youtube mr-2"></i> Subscribe on YouTube
+          <a href="https://www.youtube.com/watch?v=_3tN34csVHU" target="_blank" class="btn btn-primary w-full justify-center">
+            <i class="fa-solid fa-play mr-3"></i> Watch This Sermon
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ SERMON SERIES ══ -->
+  <!-- ══ SERMON ARCHIVE ══ -->
   <section class="section bg-slate-50">
     <div class="container">
-      <h2 class="section-title reveal">Sermon Series</h2>
-      <div class="grid md:grid-cols-3 gap-8 stagger">
-        <!-- Series 1 -->
-        <div class="bg-white rounded-[2rem] shadow-premium overflow-hidden reveal hover:shadow-2xl transition-all h-full flex flex-col">
-          <div class="aspect-video bg-gray-200">
-            <iframe class="w-full h-full" src="https://www.youtube.com/embed/videoseries?list=PLT_WFdkfhGNJk2GXZPQ7lsv_nkIZvNRpZ" frameborder="0" allowfullscreen></iframe>
+      <h2 class="section-title reveal">Recent Messages</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 stagger">
+        <!-- Sermon 1 -->
+        <a href="https://www.youtube.com/watch?v=_3tN34csVHU" target="_blank" class="sermon-card reveal">
+          <div class="sermon-thumb-wrapper">
+            <img src="https://img.youtube.com/vi/_3tN34csVHU/maxresdefault.jpg" class="sermon-thumb" alt="Sermon Thumbnail">
+            <div class="play-overlay">
+              <div class="play-button">
+                <i class="fa-solid fa-play ml-1"></i>
+              </div>
+            </div>
           </div>
-          <div class="p-8 flex flex-col flex-1">
-            <span class="text-accent font-bold text-xs uppercase tracking-widest mb-2">Playlist</span>
-            <h3 class="font-montserrat font-bold text-xl mb-4">Worship & The Word</h3>
-            <p class="text-gray-500 text-sm mb-6 flex-1">Experience our collection of messages focused on entering God's presence and understanding His heart.</p>
+          <div class="sermon-details">
+            <h3 class="sermon-title">Faith Over Fear</h3>
+            <p class="text-gray-500 text-sm mb-4 line-clamp-2">How to stand strong in God's promises during challenging seasons.</p>
+            <span class="sermon-date">Feb 26, 2026</span>
           </div>
-        </div>
-        
-        <!-- Series 2 -->
-        <div class="bg-white rounded-[2rem] shadow-premium overflow-hidden reveal hover:shadow-2xl transition-all h-full flex flex-col">
-          <div class="aspect-video bg-gray-200">
-            <iframe class="w-full h-full" src="https://www.youtube.com/embed/?listType=user_uploads&list=ElShaddaiAberdeen" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="p-8 flex flex-col flex-1">
-            <span class="text-accent font-bold text-xs uppercase tracking-widest mb-2">Uploads</span>
-            <h3 class="font-montserrat font-bold text-xl mb-4">Recent Sunay Services</h3>
-            <p class="text-gray-500 text-sm mb-6 flex-1">Catch up on all our full Sunday services, including vibrant worship and transformative teaching.</p>
-          </div>
-        </div>
+        </a>
 
-        <!-- Series 3 -->
-        <div class="bg-white rounded-[2rem] shadow-premium overflow-hidden reveal hover:shadow-2xl transition-all h-full flex flex-col">
-          <div class="aspect-video bg-gray-200">
-            <iframe class="w-full h-full" src="https://www.youtube.com/embed/videoseries?list=PLT_WFdkfhGNJk2GXZPQ7lsv_nkIZvNRpZ&index=2" frameborder="0" allowfullscreen></iframe>
+        <!-- Sermon 2 (Placeholder IDs) -->
+        <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank" class="sermon-card reveal">
+          <div class="sermon-thumb-wrapper">
+            <img src="images/aberdeen-church.jpg" class="sermon-thumb" alt="Sermon Thumbnail">
+            <div class="play-overlay">
+              <div class="play-button">
+                <i class="fa-solid fa-play ml-1"></i>
+              </div>
+            </div>
           </div>
-          <div class="p-8 flex flex-col flex-1">
-            <span class="text-accent font-bold text-xs uppercase tracking-widest mb-2">Playlist</span>
-            <h3 class="font-montserrat font-bold text-xl mb-4">Walking in Victory</h3>
-            <p class="text-gray-500 text-sm mb-6 flex-1">Learn how to overcome life's obstacles through the power of the Holy Spirit and biblical truths.</p>
+          <div class="sermon-details">
+            <h3 class="sermon-title">Walking in Purpose</h3>
+            <p class="text-gray-500 text-sm mb-4 line-clamp-2">Discovering God's unique plan for your life in this powerful message.</p>
+            <span class="sermon-date">Feb 19, 2026</span>
           </div>
-        </div>
+        </a>
+
+        <!-- Sermon 3 -->
+        <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank" class="sermon-card reveal">
+          <div class="sermon-thumb-wrapper">
+            <img src="images/pastor_1.png" class="sermon-thumb" alt="Sermon Thumbnail">
+            <div class="play-overlay">
+              <div class="play-button">
+                <i class="fa-solid fa-play ml-1"></i>
+              </div>
+            </div>
+          </div>
+          <div class="sermon-details">
+            <h3 class="sermon-title">The Power of Prayer</h3>
+            <p class="text-gray-500 text-sm mb-4 line-clamp-2">Exploring the life-changing impact of consistent, fervent prayer.</p>
+            <span class="sermon-date">Feb 12, 2026</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="mt-20 text-center reveal">
+        <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank" class="btn btn-primary py-5 px-10 rounded-2xl shadow-xl shadow-primary/20 hover:scale-105">
+           <i class="fa-brands fa-youtube text-2xl mr-3"></i> Visit Our YouTube Channel
+        </a>
       </div>
     </div>
   </section>

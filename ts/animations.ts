@@ -41,10 +41,10 @@ function initTypingEffect(): void {
     if (!el) return;
 
     const phrases: string[] = [
-        'Worship Together',
-        'Grow in Faith',
-        'Serve Our Community',
-        'Experience God\'s Love',
+        'A place for community',
+        'A sanctuary for prayer',
+        'A home for the broken',
+        'A family growing in faith',
     ];
 
     let phraseIndex = 0;
@@ -52,6 +52,7 @@ function initTypingEffect(): void {
     let isDeleting = false;
 
     function type(): void {
+        if (!el) return;
         const phrase = phrases[phraseIndex];
         el.textContent = isDeleting
             ? phrase.substring(0, charIndex--)

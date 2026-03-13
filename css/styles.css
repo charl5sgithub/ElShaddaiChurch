@@ -41,32 +41,30 @@ h1, h2, h3, h4, h5, h6 {
 /* ── Navigation (Glassmorphism) ── */
 #navbar {
   position: fixed;
-  top: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 1200px;
-  height: 80px;
-  background: var(--glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--glass-border);
-  border-radius: 40px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background: transparent;
+  backdrop-filter: none;
+  border: none;
   z-index: 1000;
   transition: all var(--transition);
   display: flex;
   align-items: center;
-  padding: 0 2rem;
-  box-shadow: var(--shadow);
+  padding: 0 4rem;
 }
 
 #navbar.scrolled {
-  top: 0;
-  width: 100%;
-  max-width: none;
-  border-radius: 0;
-  height: 70px;
+  height: 80px;
   background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+  padding: 0 4rem;
+}
+
+@media (max-width: 1024px) {
+  #navbar, #navbar.scrolled { padding: 0 1.5rem; height: 70px; }
 }
 
 .nav-container {
@@ -79,8 +77,57 @@ h1, h2, h3, h4, h5, h6 {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   text-decoration: none;
+  transition: all var(--transition);
+}
+
+.nav-logo:hover img {
+  transform: scale(1.05);
+}
+
+.nav-logo img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  transition: transform var(--transition);
+}
+
+.logo-text-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.church-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dark);
+}
+
+.church-location {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+#navbar:not(.scrolled) .church-name {
+  color: #ffffff;
+}
+
+#navbar:not(.scrolled) .church-location {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#navbar:not(.scrolled) .nav-links a {
+  color: #ffffff;
+}
+
+#navbar:not(.scrolled) .hamburger span {
+  background: #ffffff;
 }
 
 .nav-links {
@@ -349,7 +396,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .ministry-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.02);
   box-shadow: var(--shadow-lg);
 }
 
@@ -471,5 +518,119 @@ footer {
 
 /* ── Additional card & grid utilities ── */
 .shadow-premium { box-shadow: var(--shadow); }
-.rounded-premium { border-radius: 20px; }
+.rounded-premium { border-radius: 2rem; }
 .bg-gradient-premium { background: linear-gradient(135deg, var(--white), var(--bg-light)); }
+
+.card-hover-effect {
+  transition: all var(--transition);
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff, var(--shadow-lg);
+}
+
+/* ── Sermon Cards ── */
+.sermon-card {
+  background: var(--white);
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sermon-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.sermon-thumb-wrapper {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.sermon-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sermon-card:hover .sermon-thumb {
+  transform: scale(1.1);
+}
+
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all var(--transition);
+}
+
+.sermon-card:hover .play-overlay {
+  opacity: 1;
+}
+
+.play-button {
+  width: 60px;
+  height: 60px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transform: scale(0.8);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.sermon-card:hover .play-button {
+  transform: scale(1);
+}
+
+.sermon-details {
+  padding: 1.5rem 2rem 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sermon-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  color: var(--text-dark);
+}
+
+.sermon-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: auto;
+}
+
+/* ── Form Inputs ── */
+input, select, textarea {
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  background-color: var(--white) !important;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+  transform: translateY(-2px);
+}
