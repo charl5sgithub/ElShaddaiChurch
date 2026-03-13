@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giving – El Shaddai Church Aberdeen</title>
+  <meta name="description"
+    content="Support the ministry of El Shaddai Church Aberdeen. Your generosity helps us serve our community and grow our church family." />
+  <link rel="canonical" href="https://elshaddaichurch.org.uk/donate.html" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563EB',
+            'primary-dark': '#1D4ED8',
+            accent: '#D4AF37',
+            'accent-dark': '#B8860B',
+            dark: '#1F2937'
+          },
+          fontFamily: {
+            montserrat: ['Montserrat', 'sans-serif'],
+            sans: ['Open Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/church-logo.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/church-logo.png" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="font-sans text-dark bg-slate-50">
+
+  <!-- ══ NAVIGATION ══ -->
+  <nav id="navbar" aria-label="Main Navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="El Shaddai Church Home">
+        <img src="images/church-logo.png" alt="El Shaddai Church Logo">
+        <div class="logo-text-stack">
+          <span class="church-name">El Shaddai Church</span>
+        </div>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="ministries.html">Ministries</a></li>
+        <li><a href="sermons.html">Sermons</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="bookings.html">Bookings</a></li>
+        <li><a href="donate.html" class="active">Donate</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══ PAGE HEADER ══ -->
+  <header class="relative pt-48 pb-24 bg-dark text-white text-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20"></div>
+    <div class="container relative z-10">
+      <nav class="flex justify-center gap-2 mb-6 text-xs uppercase tracking-[0.3em] opacity-60">
+        <a href="index.html" class="hover:text-accent">Home</a>
+        <span>/</span>
+        <span class="text-accent">Giving</span>
+      </nav>
+      <h1 class="font-montserrat text-4xl md:text-6xl font-bold mb-4">Support the Ministry</h1>
+      <p class="text-gray-300 max-w-2xl mx-auto text-lg">Your generosity helps us continue serving our church family and
+        our community.</p>
+    </div>
+  </header>
+
+  <!-- ══ GIVING METHODS SECTION ══ -->
+  <section class="section">
+    <div class="container">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-10">
+
+          <!-- Bank Transfer Card -->
+          <div class="bg-white p-10 rounded-[3rem] shadow-premium reveal card-hover-effect">
+            <div
+              class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-3xl text-primary mb-6">
+              <i class="fa-solid fa-building-columns"></i>
+            </div>
+            <h2 class="font-montserrat font-bold text-2xl mb-4">Bank Transfer</h2>
+            <p class="text-gray-600 mb-8 leading-relaxed">
+              For direct contributions, tithes, and offerings, you can use our bank details below:
+            </p>
+            <div class="bg-slate-50 p-6 rounded-2xl space-y-4 font-mono text-sm">
+              <div class="flex justify-between border-b border-gray-100 pb-2">
+                <span class="font-bold text-gray-500 uppercase tracking-tighter">Bank</span>
+                <span class="text-dark">Lloyds Bank</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-100 pb-2">
+                <span class="font-bold text-gray-500 uppercase tracking-tighter">Account Name</span>
+                <span class="text-dark">EL SHADDAI CHURCH</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-100 pb-2">
+                <span class="font-bold text-gray-500 uppercase tracking-tighter">Sort Code</span>
+                <span class="text-dark">30-90-09</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="font-bold text-gray-500 uppercase tracking-tighter">Account No</span>
+                <span class="text-dark">00000000</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PayPal Card -->
+          <div class="bg-white p-10 rounded-[3rem] shadow-premium reveal card-hover-effect">
+            <div
+              class="w-16 h-16 rounded-2xl bg-[#003087]/10 flex items-center justify-center text-3xl text-[#003087] mb-6">
+              <i class="fa-brands fa-paypal"></i>
+            </div>
+            <h2 class="font-montserrat font-bold text-2xl mb-4">PayPal</h2>
+            <p class="text-gray-600 mb-8 leading-relaxed">
+              Quick and secure giving via PayPal. You can use your PayPal balance, debit, or credit card.
+            </p>
+            <div class="mt-auto">
+              <!-- Placeholder for actual PayPal button -->
+              <a href="https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID" target="_blank"
+                class="btn btn-primary w-full flex items-center justify-center gap-3">
+                <i class="fa-brands fa-paypal"></i>
+                Give via PayPal
+              </a>
+            </div>
+            <p class="text-xs text-gray-400 mt-6 text-center italic">
+              Note: PayPal takes a small transaction fee from each donation.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Gift Aid Section -->
+        <div
+          class="mt-16 bg-gradient-to-br from-primary to-blue-700 p-10 md:p-16 rounded-[3rem] shadow-premium reveal text-white relative overflow-hidden">
+          <!-- Decorative element -->
+          <div class="absolute -top-10 -right-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+
+          <div class="relative z-10 grid md:grid-cols-3 gap-10 items-center">
+            <div class="md:col-span-2">
+              <h3 class="font-montserrat font-bold text-3xl mb-4">Increase your gift by 25% with Gift Aid</h3>
+              <p class="text-blue-100 text-lg leading-relaxed">
+                If you are a UK taxpayer, we can reclaimed 25p for every £1 you give at no extra cost to you. This makes
+                a significant difference in our community projects.
+              </p>
+            </div>
+            <div class="text-center md:text-right">
+              <div class="inline-block bg-white text-primary p-8 rounded-[2.5rem] shadow-xl">
+                <div class="text-5xl font-bold mb-1">+25%</div>
+                <div class="text-xs uppercase tracking-widest font-bold opacity-60">Extra Impact</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Call to action/info -->
+          <div class="mt-12 pt-10 border-t border-white/20 grid md:grid-cols-2 gap-8 items-center">
+            <p class="text-sm opacity-80 italic">
+              * Through Gift Aid, your donation can increase by 25% at no extra cost to you. Please contact our
+              administrative office to complete a Gift Aid declaration.
+            </p>
+            <div class="flex justify-end">
+              <a href="contact.html?subject=giftaid" class="btn bg-white text-primary hover:bg-blue-50">Enquire About
+                Gift Aid</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CALL TO ACTION ══ -->
+  <section class="section pt-0">
+    <div class="container">
+      <div class="bg-accent/10 border border-accent/20 p-12 rounded-[3rem] text-center reveal">
+        <h3 class="font-montserrat font-bold text-3xl text-dark mb-4">Every Gift Makes a Difference</h3>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+          Whether large or small, your contribution directly supports our worship services, community outreach programs,
+          and children's ministries.
+        </p>
+        <div class="inline-flex items-center gap-3 text-accent font-bold text-lg">
+          <i class="fa-solid fa-heart"></i>
+          <span>God bless you for your generosity</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center gap-4 mb-6">
+            <img src="images/church-logo.png" alt="Logo" class="h-12 w-auto">
+            <h3 class="font-montserrat font-bold text-2xl tracking-tight">El Shaddai Church</h3>
+          </div>
+          <p class="text-gray-400 max-w-md mb-8">
+            A vibrant, Spirit-filled community in Aberdeen committed to worshipping God, growing in faith, and serving
+            our city.
+          </p>
+          <div class="flex gap-4">
+            <a href="https://www.facebook.com/elshaddaichurch/" target="_blank"
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all"><i
+                class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/elshaddaichurchaberdeen/" target="_blank"
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all"><i
+                class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank"
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all"><i
+                class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="ministries.html">Ministries</a></li>
+            <li><a href="sermons.html">Sermons</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="bookings.html">Bookings</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Service Times</h4>
+          <ul>
+            <li>Sunday Worship – 10:30 AM</li>
+            <li>Wednesday Prayer – 7:00 PM</li>
+            <li>Friday Bible Study – 7:00 PM</li>
+            <li>Saturday Youth – 5:00 PM</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact Info</h4>
+          <ul>
+            <li>📍 Kincorth Cir, Aberdeen AB12 5NX</li>
+            <li>📞 +44 (0) 1224 000000</li>
+            <li>✉️ info@elshaddaichurch.org.uk</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 El Shaddai Church Aberdeen. Made with ❤️ for God's glory.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</body>
+
+</html>

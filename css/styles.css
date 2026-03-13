@@ -56,7 +56,7 @@ h6 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 110px;
+  height: 90px;
   background: transparent;
   backdrop-filter: none;
   border: none;
@@ -68,19 +68,85 @@ h6 {
 }
 
 #navbar.scrolled {
-  height: 90px;
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(15px);
+  height: 80px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
   padding: 0 4rem;
 }
 
-@media (max-width: 1024px) {
-
+@media (max-width: 768px) {
   #navbar,
   #navbar.scrolled {
-    padding: 0 1.5rem;
-    height: 70px;
+    padding: 0 1rem;
+    height: 60px;
+    background: rgba(15, 23, 42, 0.9); /* Dark semi-transparent */
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-logo {
+    gap: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    max-width: 75%; /* Ensure space for hamburger */
+    overflow: hidden;
+  }
+
+  .nav-logo img {
+    height: 36px !important; /* Fixed small size */
+  }
+
+  .church-name {
+    font-size: 0.9rem !important; /* Smaller font to fit */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #ffffff !important; /* White text for contrast */
+  }
+
+  .church-location {
+    display: none; /* Hide location on small mobile to save space */
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    transform: translateY(-20px);
+    width: 100% !important;
+    background: rgba(15, 23, 42, 0.95); /* Full-width dropdown */
+    padding: 2rem;
+    border-radius: 0 0 20px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--transition);
+    display: flex;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    color: #ffffff !important; /* Ensure links are white */
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .hamburger {
+    display: flex !important;
+  }
+
+  .hamburger span {
+    background: #ffffff !important; /* White hamburger icon */
   }
 }
 
@@ -97,24 +163,31 @@ h6 {
   gap: 1.5rem;
   text-decoration: none;
   transition: all var(--transition);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: 1px solid transparent;
+}
+
+.nav-logo:hover {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+#navbar.scrolled .nav-logo:hover {
+  background: rgba(37, 99, 235, 0.05);
+  border-color: rgba(37, 99, 235, 0.1);
 }
 
 .nav-logo:hover img {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .nav-logo img {
-  height: 85px;
+  height: 75px;
   width: auto;
   object-fit: contain;
   transition: all var(--transition);
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-}
-
-#navbar:not(.scrolled) .nav-logo img {
-  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4)) brightness(1.1) contrast(1.1);
 }
 
 .logo-text-stack {
@@ -162,7 +235,7 @@ h6 {
   padding: 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 769px) {
   #navbar {
     width: 95%;
     top: 1rem;
@@ -262,6 +335,21 @@ h6 {
   }
 }
 
+.hero .absolute.top-10.right-10 {
+  transition: all 0.5s ease;
+}
+
+@media (max-width: 768px) {
+  .hero .absolute.top-10.right-10 {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .hero .absolute.top-10.right-10 img {
+    height: 60px;
+  }
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -274,14 +362,22 @@ h6 {
   padding: 0 1.5rem;
 }
 
+.hero-pretitle {
+  font-size: clamp(1.2rem, 4vw, 3rem);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards 0.1s;
+}
+
 .hero h1 {
-  font-size: clamp(3rem, 10vw, 6rem);
+  font-size: clamp(2.5rem, 8vw, 5rem);
   font-weight: 800;
   letter-spacing: 0.05em;
   margin-bottom: 1rem;
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeInUp 1s forwards 0.2s;
+  animation: fadeInUp 1s forwards 0.3s;
 }
 
 .hero-tagline {
@@ -364,8 +460,9 @@ h6 {
 .section-title {
   text-align: center;
   font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   position: relative;
+  width: 100%;
 }
 
 .section-title::after {

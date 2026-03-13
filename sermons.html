@@ -2,257 +2,277 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sermons – El Shaddai Church Aberdeen</title>
-  <meta name="description"
-    content="Watch our latest sermons from El Shaddai Church Aberdeen. Inspiring messages to transform your life, shared directly from our YouTube channel." />
-  <link rel="canonical" href="https://elshaddaichurch.org.uk/sermons.html" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sermons – El Shaddai Church Aberdeen</title>
+    <meta name="description"
+        content="Watch our latest sermons from El Shaddai Church Aberdeen. Inspiring messages to transform your life, shared directly from our YouTube channel." />
+    <link rel="canonical" href="https://elshaddaichurch.org.uk/sermons.html" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
 
-  <!-- TailwindCSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#2563EB',
-            'primary-dark': '#1D4ED8',
-            accent: '#D4AF37',
-            'accent-dark': '#B8860B',
-            dark: '#1F2937'
-          },
-          fontFamily: {
-            montserrat: ['Montserrat', 'sans-serif'],
-            sans: ['Open Sans', 'sans-serif']
-          }
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563EB',
+                        'primary-dark': '#1D4ED8',
+                        accent: '#D4AF37',
+                        'accent-dark': '#B8860B',
+                        dark: '#1F2937'
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        sans: ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
         }
-      }
-    }
-  </script>
+    </script>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/church-logo.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="images/church-logo.png" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/church-logo.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="images/church-logo.png" />
 
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/styles.css" />
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body class="font-sans text-dark bg-slate-50">
 
-  <!-- ══ NAVIGATION ══ -->
-  <nav id="navbar" aria-label="Main Navigation">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo" aria-label="El Shaddai Church Home">
-        <img src="images/church-logo.png" alt="El Shaddai Church Logo">
-        <div class="logo-text-stack">
-          <span class="church-name">El Shaddai Church</span>
-          <span class="church-location">Aberdeen, Scotland</span>
-        </div>
-      </a>
-      <ul class="nav-links" role="list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="ministries.html">Ministries</a></li>
-        <li><a href="sermons.html" class="active">Sermons</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="bookings.html">Bookings</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
-  </nav>
-
-  <!-- ══ PAGE HEADER ══ -->
-  <header class="relative pt-48 pb-24 bg-dark text-white text-center overflow-hidden">
-    <div class="absolute inset-0 opacity-40 bg-[url('images/pastor.png')] bg-cover bg-center"></div>
-    <div class="absolute inset-0 bg-gradient-to-b from-dark/60 to-dark"></div>
-    <div class="container relative z-10">
-      <nav class="flex justify-center gap-2 mb-6 text-xs uppercase tracking-[0.3em] opacity-60">
-        <a href="index.html" class="hover:text-accent">Home</a>
-        <span>/</span>
-        <span class="text-accent">Sermons</span>
-      </nav>
-      <h1 class="font-montserrat text-4xl md:text-6xl font-bold mb-4">Word & Spirit</h1>
-      <p class="text-gray-300 max-w-2xl mx-auto text-lg">Watch our latest messages and be transformed by the renewing of your mind through God's living Word.</p>
-    </div>
-  </header>
-
-  <!-- ══ FEATURED SERMON ══ -->
-  <section class="section">
-    <div class="container">
-      <div class="grid lg:grid-cols-12 gap-12 items-center">
-        <div class="lg:col-span-8 reveal">
-          <a href="https://www.youtube.com/watch?v=_3tN34csVHU" target="_blank" class="sermon-card group">
-            <div class="sermon-thumb-wrapper bg-black">
-              <img src="https://img.youtube.com/vi/_3tN34csVHU/maxresdefault.jpg" alt="Faith Over Fear" class="sermon-thumb opacity-90">
-              <div class="play-overlay opacity-100 bg-transparent">
-                <div class="play-button shadow-2xl">
-                  <i class="fa-solid fa-play ml-1"></i>
+    <!-- ══ NAVIGATION ══ -->
+    <nav id="navbar" aria-label="Main Navigation">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="El Shaddai Church Home">
+                <img src="images/church-logo.png" alt="El Shaddai Church Logo">
+                <div class="logo-text-stack">
+                    <span class="church-name">El Shaddai Church</span>
                 </div>
-              </div>
+            </a>
+            <ul class="nav-links" role="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="ministries.html">Ministries</a></li>
+                <li><a href="sermons.html" class="active">Sermons</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="bookings.html">Bookings</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
             </div>
-          </a>
         </div>
-        <div class="lg:col-span-4 reveal">
-          <span class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block">Most Recent Message</span>
-          <h2 class="font-montserrat font-bold text-3xl md:text-4xl mb-6 leading-tight">Faith Over Fear in Challenging Seasons</h2>
-          <p class="text-gray-600 mb-8 leading-relaxed">
-            In this powerful message, Rev. Angeline S. Henry shares how we can stand strong on God's promises even when the world around us feels uncertain. Discover the peace that surpasses understanding.
-          </p>
-          <div class="flex items-center gap-4 mb-8">
-            <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
-              <img src="images/pastor.png" alt="Pastor" class="w-full h-full object-cover">
+    </nav>
+
+    <!-- ══ PAGE HEADER ══ -->
+    <header class="relative pt-48 pb-24 bg-dark text-white text-center overflow-hidden">
+        <div class="absolute inset-0 opacity-40 bg-[url('images/pastor.png')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-dark/60 to-dark"></div>
+        <div class="container relative z-10">
+            <nav class="flex justify-center gap-2 mb-6 text-xs uppercase tracking-[0.3em] opacity-60">
+                <a href="index.html" class="hover:text-accent">Home</a>
+                <span>/</span>
+                <span class="text-accent">Sermons</span>
+            </nav>
+            <h1 class="font-montserrat text-4xl md:text-6xl font-bold mb-4">Word & Spirit</h1>
+            <p class="text-gray-300 max-w-2xl mx-auto text-lg">Watch our latest messages and be transformed by the
+                renewing of your mind through God's living Word.</p>
+        </div>
+    </header>
+
+    <!-- ══ FEATURED SERMON ══ -->
+    <section class="section">
+        <div class="container">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-8 reveal">
+                    <a href="https://www.youtube.com/watch?v=_3tN34csVHU" target="_blank" class="sermon-card group">
+                        <div class="sermon-thumb-wrapper bg-black">
+                            <img src="https://img.youtube.com/vi/_3tN34csVHU/maxresdefault.jpg" alt="Faith Over Fear"
+                                class="sermon-thumb opacity-90">
+                            <div class="play-overlay opacity-100 bg-transparent">
+                                <div class="play-button shadow-2xl">
+                                    <i class="fa-solid fa-play ml-1"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="lg:col-span-4 reveal">
+                    <span class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block">Most Recent
+                        Message</span>
+                    <h2 class="font-montserrat font-bold text-3xl md:text-4xl mb-6 leading-tight">Faith Over Fear in
+                        Challenging Seasons</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        In this powerful message, Rev. Angeline S. Henry shares how we can stand strong on God's
+                        promises even when the world around us feels uncertain. Discover the peace that surpasses
+                        understanding.
+                    </p>
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
+                            <img src="images/pastor.png" alt="Pastor" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="font-bold">Rev. Angeline S. Henry</div>
+                            <div class="text-sm text-gray-500">Sunday Service · Feb 26, 2026</div>
+                        </div>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=_3tN34csVHU" target="_blank"
+                        class="btn btn-primary w-full justify-center">
+                        <i class="fa-solid fa-play mr-3"></i> Watch This Sermon
+                    </a>
+                </div>
             </div>
-            <div>
-              <div class="font-bold">Rev. Angeline S. Henry</div>
-              <div class="text-sm text-gray-500">Sunday Service · Feb 26, 2026</div>
+        </div>
+    </section>
+
+    <!-- ══ SERMON ARCHIVE ══ -->
+    <section class="section bg-slate-50">
+        <div class="container">
+            <h2 class="section-title reveal">Recent Messages</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 stagger">
+                <!-- Sermon 1 -->
+                <a href="https://www.youtube.com/watch?v=_3tN34csVHU" target="_blank" class="sermon-card reveal">
+                    <div class="sermon-thumb-wrapper">
+                        <img src="https://img.youtube.com/vi/_3tN34csVHU/maxresdefault.jpg" class="sermon-thumb"
+                            alt="Sermon Thumbnail">
+                        <div class="play-overlay">
+                            <div class="play-button">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sermon-details">
+                        <h3 class="sermon-title">Faith Over Fear</h3>
+                        <p class="text-gray-500 text-sm mb-4 line-clamp-2">How to stand strong in God's promises during
+                            challenging seasons.</p>
+                        <span class="sermon-date">Feb 26, 2026</span>
+                    </div>
+                </a>
+
+                <!-- Sermon 2 (Placeholder IDs) -->
+                <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank" class="sermon-card reveal">
+                    <div class="sermon-thumb-wrapper">
+                        <img src="images/aberdeen-church.jpg" class="sermon-thumb" alt="Sermon Thumbnail">
+                        <div class="play-overlay">
+                            <div class="play-button">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sermon-details">
+                        <h3 class="sermon-title">Walking in Purpose</h3>
+                        <p class="text-gray-500 text-sm mb-4 line-clamp-2">Discovering God's unique plan for your life
+                            in this powerful message.</p>
+                        <span class="sermon-date">Feb 19, 2026</span>
+                    </div>
+                </a>
+
+                <!-- Sermon 3 -->
+                <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank" class="sermon-card reveal">
+                    <div class="sermon-thumb-wrapper">
+                        <img src="images/pastor_1.png" class="sermon-thumb" alt="Sermon Thumbnail">
+                        <div class="play-overlay">
+                            <div class="play-button">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sermon-details">
+                        <h3 class="sermon-title">The Power of Prayer</h3>
+                        <p class="text-gray-500 text-sm mb-4 line-clamp-2">Exploring the life-changing impact of
+                            consistent, fervent prayer.</p>
+                        <span class="sermon-date">Feb 12, 2026</span>
+                    </div>
+                </a>
             </div>
-          </div>
-          <a href="https://www.youtube.com/watch?v=_3tN34csVHU" target="_blank" class="btn btn-primary w-full justify-center">
-            <i class="fa-solid fa-play mr-3"></i> Watch This Sermon
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ══ SERMON ARCHIVE ══ -->
-  <section class="section bg-slate-50">
-    <div class="container">
-      <h2 class="section-title reveal">Recent Messages</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 stagger">
-        <!-- Sermon 1 -->
-        <a href="https://www.youtube.com/watch?v=_3tN34csVHU" target="_blank" class="sermon-card reveal">
-          <div class="sermon-thumb-wrapper">
-            <img src="https://img.youtube.com/vi/_3tN34csVHU/maxresdefault.jpg" class="sermon-thumb" alt="Sermon Thumbnail">
-            <div class="play-overlay">
-              <div class="play-button">
-                <i class="fa-solid fa-play ml-1"></i>
-              </div>
+            <div class="mt-20 text-center reveal">
+                <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank"
+                    class="btn btn-primary py-5 px-10 rounded-2xl shadow-xl shadow-primary/20 hover:scale-105">
+                    <i class="fa-brands fa-youtube text-2xl mr-3"></i> Visit Our YouTube Channel
+                </a>
             </div>
-          </div>
-          <div class="sermon-details">
-            <h3 class="sermon-title">Faith Over Fear</h3>
-            <p class="text-gray-500 text-sm mb-4 line-clamp-2">How to stand strong in God's promises during challenging seasons.</p>
-            <span class="sermon-date">Feb 26, 2026</span>
-          </div>
-        </a>
+        </div>
+    </section>
 
-        <!-- Sermon 2 (Placeholder IDs) -->
-        <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank" class="sermon-card reveal">
-          <div class="sermon-thumb-wrapper">
-            <img src="images/aberdeen-church.jpg" class="sermon-thumb" alt="Sermon Thumbnail">
-            <div class="play-overlay">
-              <div class="play-button">
-                <i class="fa-solid fa-play ml-1"></i>
-              </div>
+    <!-- ══ FOOTER ══ -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="images/church-logo.png" alt="Logo" class="h-12 w-auto">
+                        <h3 class="font-montserrat font-bold text-2xl tracking-tight">El Shaddai Church</h3>
+                    </div>
+                    <p class="text-gray-400 max-w-md mb-8">
+                        A vibrant, Spirit-filled community in Aberdeen committed to worshipping God, growing in faith,
+                        and serving our city.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.facebook.com/elshaddaichurch/" target="_blank"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/elshaddaichurchaberdeen/" target="_blank"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="ministries.html">Ministries</a></li>
+                        <li><a href="sermons.html">Sermons</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="bookings.html">Bookings</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Service Times</h4>
+                    <ul>
+                        <li>Sunday Worship – 10:30 AM</li>
+                        <li>Wednesday Prayer – 7:00 PM</li>
+                        <li>Friday Bible Study – 7:00 PM</li>
+                        <li>Saturday Youth – 5:00 PM</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📍 Kincorth Cir, Aberdeen AB12 5NX</li>
+                        <li>📞 +44 (0) 1224 000000</li>
+                        <li>✉️ info@elshaddaichurch.org.uk</li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <div class="sermon-details">
-            <h3 class="sermon-title">Walking in Purpose</h3>
-            <p class="text-gray-500 text-sm mb-4 line-clamp-2">Discovering God's unique plan for your life in this powerful message.</p>
-            <span class="sermon-date">Feb 19, 2026</span>
-          </div>
-        </a>
 
-        <!-- Sermon 3 -->
-        <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank" class="sermon-card reveal">
-          <div class="sermon-thumb-wrapper">
-            <img src="images/pastor_1.png" class="sermon-thumb" alt="Sermon Thumbnail">
-            <div class="play-overlay">
-              <div class="play-button">
-                <i class="fa-solid fa-play ml-1"></i>
-              </div>
+            <div class="footer-bottom">
+                &copy; 2026 El Shaddai Church Aberdeen. Made with ❤️ for God's glory.
             </div>
-          </div>
-          <div class="sermon-details">
-            <h3 class="sermon-title">The Power of Prayer</h3>
-            <p class="text-gray-500 text-sm mb-4 line-clamp-2">Exploring the life-changing impact of consistent, fervent prayer.</p>
-            <span class="sermon-date">Feb 12, 2026</span>
-          </div>
-        </a>
-      </div>
+        </div>
+    </footer>
 
-      <div class="mt-20 text-center reveal">
-        <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank" class="btn btn-primary py-5 px-10 rounded-2xl shadow-xl shadow-primary/20 hover:scale-105">
-           <i class="fa-brands fa-youtube text-2xl mr-3"></i> Visit Our YouTube Channel
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ FOOTER ══ -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="col-span-1 md:col-span-2">
-          <div class="flex items-center gap-4 mb-6">
-            <img src="images/church-logo.png" alt="Logo" class="h-12 w-auto">
-            <h3 class="font-montserrat font-bold text-2xl tracking-tight">El Shaddai Church</h3>
-          </div>
-          <p class="text-gray-400 max-w-md mb-8">
-            A vibrant, Spirit-filled community in Aberdeen committed to worshipping God, growing in faith, and serving our city.
-          </p>
-          <div class="flex gap-4">
-            <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-youtube"></i></a>
-          </div>
-        </div>
-        
-        <div>
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="ministries.html">Ministries</a></li>
-            <li><a href="sermons.html">Sermons</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="bookings.html">Bookings</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-        
-        <div>
-          <h4>Service Times</h4>
-          <ul>
-            <li>Sunday Worship – 10:30 AM</li>
-            <li>Wednesday Prayer – 7:00 PM</li>
-            <li>Friday Bible Study – 7:00 PM</li>
-            <li>Saturday Youth – 5:00 PM</li>
-          </ul>
-        </div>
-        
-        <div>
-          <h4>Contact Info</h4>
-          <ul>
-            <li>📍 Aberdeen, Scotland</li>
-            <li>📞 +44 (0) 1224 000000</li>
-            <li>✉️ info@elshaddaichurch.org.uk</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        &copy; 2026 El Shaddai Church Aberdeen. Made with ❤️ for God's glory.
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>
