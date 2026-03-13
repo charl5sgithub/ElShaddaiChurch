@@ -2,475 +2,268 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ministries – El Shaddai Church Aberdeen</title>
-    <meta name="description"
-        content="Discover the ministries at El Shaddai Church Aberdeen. From children to outreach, there's a place for everyone to serve and grow." />
-    <link rel="canonical" href="https://elshaddaichurch.org.uk/ministries.html" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ministries – El Shaddai Church Aberdeen</title>
+  <meta name="description"
+    content="Discover the ministries at El Shaddai Church Aberdeen. From children to outreach, there's a place for everyone to serve and grow." />
+  <link rel="canonical" href="https://elshaddaichurch.org.uk/ministries.html" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap"
-        rel="stylesheet" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#4DA6FF', 'primary-dark': '#2980d9',
-                        accent: '#C9A227', 'accent-dark': '#a8841e',
-                        church: { text: '#333333', light: '#666666', bg: '#F5F7FA' }
-                    },
-                    fontFamily: { poppins: ['Poppins', 'sans-serif'], sans: ['Open Sans', 'sans-serif'] }
-                }
-            }
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563EB',
+            'primary-dark': '#1D4ED8',
+            accent: '#D4AF37',
+            'accent-dark': '#B8860B',
+            dark: '#1F2937'
+          },
+          fontFamily: {
+            montserrat: ['Montserrat', 'sans-serif'],
+            sans: ['Open Sans', 'sans-serif']
+          }
         }
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%234DA6FF'/><text y='.9em' font-size='70' x='15' fill='white'>✝</text></svg>" />
-    <link rel="stylesheet" href="css/styles.css" />
+      }
+    }
+  </script>
 
-    <style>
-        .ministry-card-img {
-            height: 220px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            position: relative;
-            overflow: hidden;
-        }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-        .ministry-card-img::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.4));
-        }
-    </style>
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%232563EB'/><text y='.9em' font-size='70' x='15' fill='white'>✝</text></svg>" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-<body>
+<body class="font-sans text-dark bg-slate-50">
 
-    <!-- ══ NAVIGATION ══ -->
-    <nav id="navbar" aria-label="Main Navigation">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo" aria-label="El Shaddai Church Home">
-                <img src="images/church-logo.png" class="h-10 w-auto" alt="Church Logo">
-                <div class="nav-logo-text">
-                    <div class="church-name">El Shaddai Church</div>
-                    <div class="church-location">Aberdeen, Scotland</div>
-                </div>
-            </a>
-            <ul class="nav-links" role="list">
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="about.html" aria-haspopup="true" aria-expanded="false">About ▾</a>
-                    <ul class="dropdown-menu" role="list">
-                        <li><a href="about.html">Leadership</a></li>
-                        <li><a href="about.html#expect">What to Expect</a></li>
-                        <li><a href="about.html#faith">Declaration of Faith</a></li>
-                    </ul>
-                </li>
-                <li><a href="ministries.html" class="active">Ministries</a></li>
-                <li><a href="sermons.html">Sermons</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="contact.html#visit" class="nav-cta">Plan Your Visit</a></li>
-            </ul>
-            <button id="hamburger" class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false"
-                aria-controls="mobileNav">
-                <span></span><span></span><span></span>
-            </button>
+  <!-- ══ NAVIGATION ══ -->
+  <nav id="navbar" aria-label="Main Navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="El Shaddai Church Home">
+        <img src="images/church-logo.png" alt="El Shaddai Church Logo" class="h-10 w-auto">
+        <div class="hidden md:block">
+          <div class="font-montserrat font-bold text-lg leading-tight uppercase tracking-wider">El Shaddai</div>
+          <div class="text-[10px] text-gray-500 uppercase tracking-[0.2em]">Aberdeen, Scotland</div>
         </div>
-        <div id="mobileNav" class="mobile-nav" role="navigation" aria-label="Mobile Navigation">
-            <a href="index.html">🏠 Home</a>
-            <a href="about.html">✝ About Us</a>
-            <a href="about.html#expect">🙏 What to Expect</a>
-            <a href="about.html#faith">📖 Declaration of Faith</a>
-            <a href="ministries.html" class="text-primary">👥 Ministries</a>
-            <a href="sermons.html">🎙 Sermons</a>
-            <a href="events.html">📅 Events</a>
-            <a href="contact.html">📬 Contact</a>
-            <a href="contact.html#visit" class="btn btn-primary btn-sm mt-3 inline-block">Plan Your Visit</a>
-        </div>
-    </nav>
-
-    <!-- ══ PAGE HEADER ══ -->
-    <header class="page-header" role="banner" aria-labelledby="page-title">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <a href="index.html">Home</a>
-            <i class="fa-solid fa-chevron-right text-xs opacity-60" aria-hidden="true"></i>
-            <span>Ministries</span>
-        </nav>
-        <h1 id="page-title">Our Ministries</h1>
-        <p>Find your place to serve, grow, and connect with fellow believers.</p>
-    </header>
-
-    <!-- ══ MINISTRIES INTRO ══ -->
-    <section class="section-sm bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-100"
-        aria-label="Ministries overview">
-        <div class="container text-center max-w-3xl">
-            <p class="text-church-light leading-relaxed text-lg">
-                At El Shaddai Church, we believe every member has God-given gifts to contribute to the body of Christ.
-                Our ministries provide meaningful opportunities to use those gifts, build community,
-                and impact lives for the Kingdom of God.
-            </p>
-        </div>
-    </section>
-
-    <!-- ══ MINISTRIES GRID ══ -->
-    <section class="section" id="all-ministries" aria-labelledby="ministries-heading">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-badge">Serving Together</span>
-                <h2 id="ministries-heading" class="section-title">All Ministries</h2>
-                <div class="accent-divider"></div>
-            </div>
-
-            <div class="ministry-grid stagger">
-
-                <!-- Children Ministry -->
-                <article class="card cursor-pointer ministry-trigger" id="children" aria-labelledby="children-title"
-                    data-title="Children Ministry"
-                    data-description="Our Children's Ministry is a vibrant, safe, and fun environment where children ages 3–12 learn about Jesus through age-appropriate teaching, creative activities, and worship. We believe in laying a strong spiritual foundation early in life."
-                    data-leader="Children's Ministry Team"
-                    data-schedule="Sundays during 10:30 AM Service"
-                    data-image="images/children-ministry.png">
-                    <div class="ministry-card-img" style="background: linear-gradient(135deg,#ff9a9e,#fecfef,#ffecd2);">
-                        <img src="images/children-ministry.png" alt="Children in Sunday school class"
-                            class="w-full h-full object-cover absolute inset-0" loading="lazy" />
-                        <span style="position:relative;z-index:1;">🧒</span>
-                    </div>
-                    <div class="card-body">
-                        <span class="tag tag-blue mb-2">Children</span>
-                        <h3 id="children-title" class="font-poppins font-bold text-lg mb-2">Children Ministry</h3>
-                        <p class="text-church-light text-sm leading-relaxed mb-4 line-clamp-2">
-                            A vibrant, safe, and fun environment where children ages 3–12 learn about Jesus
-                            through age-appropriate teaching and creative activities.
-                        </p>
-                        <div class="flex items-center gap-2 text-xs text-church-light">
-                            <i class="fa-solid fa-user" aria-hidden="true"></i>
-                            <span>Team Led</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Youth Ministry -->
-                <article class="card cursor-pointer ministry-trigger" id="youth" aria-labelledby="youth-title"
-                    data-title="Youth Ministry"
-                    data-description="Empowering teenagers and young adults to build a strong foundation in Christ. Through discipleship, fellowship, and outreach, we help young people find their identity and purpose in God. Our sessions are interactive and relevant to today's challenges."
-                    data-leader="Youth Leadership Team"
-                    data-schedule="Saturdays 5:00 PM"
-                    data-image="">
-                    <div class="ministry-card-img" style="background: linear-gradient(135deg,#4facfe,#00f2fe);">
-                        <span style="position:relative;z-index:1;">🙌</span>
-                    </div>
-                    <div class="card-body">
-                        <span class="tag tag-blue mb-2">Youth</span>
-                        <h3 id="youth-title" class="font-poppins font-bold text-lg mb-2">Youth Ministry</h3>
-                        <p class="text-church-light text-sm leading-relaxed mb-4 line-clamp-2">
-                            Empowering teenagers and young adults to build a strong foundation in Christ through discipleship and fellowship.
-                        </p>
-                        <div class="flex items-center gap-2 text-xs text-church-light">
-                            <i class="fa-solid fa-user" aria-hidden="true"></i>
-                            <span>Leadership Team</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Women's Fellowship -->
-                <article class="card cursor-pointer ministry-trigger" id="women" aria-labelledby="women-title"
-                    data-title="Women's Fellowship"
-                    data-description="A community of women growing together in faith, supporting one another, and discovering their God-given potential. Through Bible studies, prayer, and fellowship events, women are equipped to thrive in every area of life."
-                    data-leader="Women's Fellowship Committee"
-                    data-schedule="Monthly gatherings + weekly prayer"
-                    data-image="">
-                    <div class="ministry-card-img" style="background: linear-gradient(135deg,#f093fb,#f5576c);">
-                        <span style="position:relative;z-index:1;">👑</span>
-                    </div>
-                    <div class="card-body">
-                        <span class="tag tag-gold mb-2">Women</span>
-                        <h3 id="women-title" class="font-poppins font-bold text-lg mb-2">Women's Fellowship</h3>
-                        <p class="text-church-light text-sm leading-relaxed mb-4 line-clamp-2">
-                            A community of women growing together in faith and supporting one another.
-                        </p>
-                        <div class="flex items-center gap-2 text-xs text-church-light">
-                            <i class="fa-solid fa-user" aria-hidden="true"></i>
-                            <span>Committee led</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Men's Fellowship -->
-                <article class="card cursor-pointer ministry-trigger" id="men" aria-labelledby="men-title"
-                    data-title="Men's Fellowship"
-                    data-description="Iron sharpens iron. Our men's ministry builds brotherhood, accountability, and spiritual strength. Men are challenged to be godly leaders in their homes, workplaces, and community. We gather for deep discussions, prayer, and practical support."
-                    data-leader="Men's Leadership Team"
-                    data-schedule="Monthly gatherings + quarterly events"
-                    data-image="images/MenFellowship.png">
-                    <div class="ministry-card-img" style="background: linear-gradient(135deg,#4b6cb7,#182848);">
-                        <img src="images/MenFellowship.png" alt="Men's Fellowship group"
-                            class="w-full h-full object-cover absolute inset-0" loading="lazy" />
-                        <span style="position:relative;z-index:1;">💪</span>
-                    </div>
-                    <div class="card-body">
-                        <span class="tag tag-blue mb-2">Men</span>
-                        <h3 id="men-title" class="font-poppins font-bold text-lg mb-2">Men's Fellowship</h3>
-                        <p class="text-church-light text-sm leading-relaxed mb-4 line-clamp-2">
-                            Iron sharpens iron. Our men's ministry builds brotherhood, accountability, and spiritual strength.
-                        </p>
-                        <div class="flex items-center gap-2 text-xs text-church-light">
-                            <i class="fa-solid fa-user" aria-hidden="true"></i>
-                            <span>Leadership Team</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Worship Team -->
-                <article class="card cursor-pointer ministry-trigger" id="worship" aria-labelledby="worship-title"
-                    data-title="Worship Team"
-                    data-description="A passionate team of musicians, singers, and creatives dedicated to leading the congregation into God's presence every Sunday. We value heart-felt worship and excellence in our craft. Musicians and singers of all skill levels are welcome to audition."
-                    data-leader="Worship Director"
-                    data-schedule="Rehearsals: Saturdays • Services: Sundays"
-                    data-image="">
-                    <div class="ministry-card-img" style="background: linear-gradient(135deg,#f7971e,#ffd200);">
-                        <span style="position:relative;z-index:1;">🎶</span>
-                    </div>
-                    <div class="card-body">
-                        <span class="tag tag-gold mb-2">Worship</span>
-                        <h3 id="worship-title" class="font-poppins font-bold text-lg mb-2">Worship Team</h3>
-                        <p class="text-church-light text-sm leading-relaxed mb-4 line-clamp-2">
-                            A passionate team of musicians and singers dedicated to leading worship every Sunday.
-                        </p>
-                        <div class="flex items-center gap-2 text-xs text-church-light">
-                            <i class="fa-solid fa-user" aria-hidden="true"></i>
-                            <span>Worship Director</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Prayer Ministry -->
-                <article class="card cursor-pointer ministry-trigger" id="prayer" aria-labelledby="prayer-title"
-                    data-title="Prayer Ministry"
-                    data-description="The engine room of our church. Our intercessors stand in the gap for the congregation, the city, and the nations. We believe prayer changes everything and are committed to being a house of prayer with multiple sessions throughout the week."
-                    data-leader="Prayer Coordinator"
-                    data-schedule="Fridays 7:00 PM + early morning prayer"
-                    data-image="">
-                    <div class="ministry-card-img" style="background: linear-gradient(135deg,#2980d9,#27ae60);">
-                        <span style="position:relative;z-index:1;">🙏</span>
-                    </div>
-                    <div class="card-body">
-                        <span class="tag tag-blue mb-2">Prayer</span>
-                        <h3 id="prayer-title" class="font-poppins font-bold text-lg mb-2">Prayer Ministry</h3>
-                        <p class="text-church-light text-sm leading-relaxed mb-4 line-clamp-2">
-                            The engine room of our church, interceding for the congregation and the nations.
-                        </p>
-                        <div class="flex items-center gap-2 text-xs text-church-light">
-                            <i class="fa-solid fa-user" aria-hidden="true"></i>
-                            <span>Prayer Coordinator</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Outreach Ministry -->
-                <article class="card cursor-pointer ministry-trigger" id="outreach" aria-labelledby="outreach-title"
-                    data-title="Outreach Ministry"
-                    data-description="Taking the love of Christ beyond our walls into the streets of Aberdeen. From food banks to community events, we are passionate about meeting practical and spiritual needs through acts of service and evangelism."
-                    data-leader="Outreach Coordinator"
-                    data-schedule="Monthly outreach events"
-                    data-image="">
-                    <div class="ministry-card-img" style="background: linear-gradient(135deg,#f7971e,#e74c3c);">
-                        <span style="position:relative;z-index:1;">🌍</span>
-                    </div>
-                    <div class="card-body">
-                        <span class="tag tag-gold mb-2">Outreach</span>
-                        <h3 id="outreach-title" class="font-poppins font-bold text-lg mb-2">Outreach Ministry</h3>
-                        <p class="text-church-light text-sm leading-relaxed mb-4 line-clamp-2">
-                            Taking the love of Christ beyond our walls into the streets of Aberdeen through service.
-                        </p>
-                        <div class="flex items-center gap-2 text-xs text-church-light">
-                            <i class="fa-solid fa-user" aria-hidden="true"></i>
-                            <span>Outreach Coordinator</span>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ══ GET INVOLVED CTA ══ -->
-    <section class="section pattern-bg" aria-label="Get involved call to action">
-        <div class="container max-w-3xl text-center">
-            <div class="fade-in">
-                <span class="section-badge">Get Involved</span>
-                <h2 class="section-title mt-3">Not Sure Where to Start?</h2>
-                <div class="accent-divider"></div>
-                <p class="section-subtitle mt-3">
-                    Talk to one of our friendly team members after the Sunday service, or send us a message
-                    and we'll help you find the right place to connect and serve.
-                </p>
-                <div class="flex flex-wrap gap-4 justify-center mt-8">
-                    <a href="contact.html" class="btn btn-primary" id="ministries-contact-btn">
-                        <i class="fa-solid fa-envelope mr-1" aria-hidden="true"></i>
-                        Contact Us
-                    </a>
-                    <a href="contact.html#visit" class="btn btn-outline-dark" id="ministries-visit-btn">
-                        <i class="fa-solid fa-church mr-1" aria-hidden="true"></i>
-                        Visit on Sunday
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══ FOOTER ══ -->
-    <footer class="footer" role="contentinfo">
-        <div class="footer-grid">
-            <div>
-                <div class="flex items-center gap-3 mb-3">
-                    <img src="images/church-logo.png" class="h-10 w-auto" alt="Church Logo">
-                    <div>
-                        <div class="footer-logo-text">El Shaddai Church</div>
-                        <div class="footer-tagline">Aberdeen, Scotland</div>
-                    </div>
-                </div>
-                <p class="footer-desc">A vibrant, Spirit-filled community committed to worshipping God, growing in
-                    faith, and serving our city with the love of Jesus Christ.</p>
-                <div class="social-links" aria-label="Social media links">
-                    <a href="https://www.facebook.com/elshaddaichurch/" target="_blank" rel="noopener noreferrer"
-                        class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"
-                            aria-hidden="true"></i></a>
-                    <a href="https://www.instagram.com/elshaddaichurchaberdeen/" target="_blank"
-                        rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i
-                            class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-                    <a href="https://www.youtube.com/@ElShaddaiAberdeen" target="_blank" rel="noopener noreferrer"
-                        class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"
-                            aria-hidden="true"></i></a>
-                    <a href="mailto:info@elshaddaichurch.org.uk" class="social-link" aria-label="Email"><i
-                            class="fa-solid fa-envelope" aria-hidden="true"></i></a>
-                </div>
-            </div>
-            <div>
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="ministries.html">Ministries</a></li>
-                    <li><a href="sermons.html">Sermons</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Service Times</h4>
-                <div class="service-time">
-                    <div class="service-time-dot" aria-hidden="true"></div>
-                    <div>
-                        <div class="text-white text-sm font-semibold font-poppins">Sunday Worship</div>
-                        <div class="text-white/50 text-xs">10:30 AM</div>
-                    </div>
-                </div>
-                <div class="service-time">
-                    <div class="service-time-dot" aria-hidden="true"></div>
-                    <div>
-                        <div class="text-white text-sm font-semibold font-poppins">Bible Study</div>
-                        <div class="text-white/50 text-xs">Wednesday 7:00 PM</div>
-                    </div>
-                </div>
-                <div class="service-time">
-                    <div class="service-time-dot" aria-hidden="true"></div>
-                    <div>
-                        <div class="text-white text-sm font-semibold font-poppins">Prayer Meeting</div>
-                        <div class="text-white/50 text-xs">Friday 7:00 PM</div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h4>Stay Connected</h4>
-                <form id="newsletterForm" aria-label="Newsletter signup">
-                    <div class="newsletter-form">
-                        <label for="newsletter-email" class="sr-only">Email address</label>
-                        <input type="email" id="newsletter-email" class="newsletter-input" placeholder="your@email.com"
-                            required autocomplete="email" />
-                        <button type="submit" class="newsletter-btn">Subscribe</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 El Shaddai Church Aberdeen. All rights reserved.</p>
-            <p>Made with ❤️ for God's glory</p>
-        </div>
-    </footer>
-
-    <!-- ══ MINISTRY MODAL ══ -->
-    <div id="ministryModal" class="fixed inset-0 z-[2000] hidden flex items-center justify-center p-4 md:p-8">
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300 opacity-0" id="modalOverlay"></div>
-        
-        <!-- Modal Content -->
-        <div class="relative bg-white w-full max-w-4xl max-h-[90vh] rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row transform scale-95 opacity-0 transition-all duration-300" id="modalContent">
-            <!-- Close Button -->
-            <button class="absolute top-4 right-4 z-10 bg-white/80 hover:bg-white text-church-text p-2 rounded-full shadow-md transition-all group" id="closeModal">
-                <i class="fa-solid fa-xmark text-xl" aria-hidden="true"></i>
-                <span class="sr-only">Close Modal</span>
-            </button>
-
-            <!-- Image Column -->
-            <div class="w-full md:w-1/2 h-64 md:h-auto overflow-hidden bg-church-bg flex items-center justify-center relative">
-                <div id="modalImageFallback" class="text-6xl absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10"></div>
-                <img id="modalImage" src="" alt="" class="w-full h-full object-cover relative z-1" />
-            </div>
-
-            <!-- Info Column -->
-            <div class="w-full md:w-1/2 p-6 md:p-10 overflow-y-auto">
-                <span class="section-badge mb-2">Ministry</span>
-                <h2 id="modalTitle" class="section-title text-2xl md:text-3xl mb-4" style="text-align: left; margin-left: 0;">Ministry Title</h2>
-                <div class="accent-divider" style="margin-left: 0;"></div>
-                
-                <p id="modalDescription" class="text-church-light leading-relaxed mb-6">
-                    Ministry description text goes here...
-                </p>
-
-                <div class="space-y-4 mb-8">
-                    <div class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                            <i class="fa-solid fa-user-tie" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs font-bold text-church-text uppercase tracking-wider mb-0.5">Leader</p>
-                            <p id="modalLeader" class="text-sm text-church-light">Leadership Team</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center text-accent shrink-0">
-                            <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs font-bold text-church-text uppercase tracking-wider mb-0.5">Schedule</p>
-                            <p id="modalSchedule" class="text-sm text-church-light">Weekly / Monthly</p>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="contact.html" class="btn btn-primary w-full justify-center" id="modalCTA">
-                    <i class="fa-solid fa-envelope mr-2" aria-hidden="true"></i>
-                    Inquire About This Ministry
-                </a>
-            </div>
-        </div>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="ministries.html" class="active">Ministries</a></li>
+        <li><a href="sermons.html">Sermons</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
     </div>
+  </nav>
 
-    <button id="scrollTop" aria-label="Scroll back to top"><i class="fa-solid fa-chevron-up"
-            aria-hidden="true"></i></button>
-    <script src="js/main.js" defer></script>
-    <script src="js/animations.js" defer></script>
+  <!-- ══ PAGE HEADER ══ -->
+  <header class="relative pt-48 pb-24 bg-dark text-white text-center overflow-hidden">
+    <div class="absolute inset-0 opacity-40 bg-[url('images/hero.png')] bg-cover bg-center"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-dark/60 to-dark"></div>
+    <div class="container relative z-10">
+      <nav class="flex justify-center gap-2 mb-6 text-xs uppercase tracking-[0.3em] opacity-60">
+        <a href="index.html" class="hover:text-accent">Home</a>
+        <span>/</span>
+        <span class="text-accent">Ministries</span>
+      </nav>
+      <h1 class="font-montserrat text-4xl md:text-6xl font-bold mb-4">Our Ministries</h1>
+      <p class="text-gray-300 max-w-2xl mx-auto text-lg">Find your place to serve, grow, and connect with fellow
+        believers as we impact our community together.</p>
+    </div>
+  </header>
+
+  <!-- ══ MINISTRIES GRID ══ -->
+  <section class="section">
+    <div class="container">
+      <div class="ministry-grid">
+        <!-- Ministry items same as index but with more detailed descriptions maybe -->
+        <!-- Children Ministry -->
+        <div class="ministry-card reveal ministry-trigger" data-title="Children Ministry"
+          data-description="Our Children's Ministry provides a safe and fun environment for kids to learn about God's love through interactive lessons, games, and worship. We believe in laying a strong spiritual foundation early in life."
+          data-leader="Sis. Sarah Johnson" data-schedule="Sundays during Main Service"
+          data-image="images/children-ministry.png">
+          <img src="images/children-ministry.png" alt="Children Ministry">
+          <div class="ministry-overlay">
+            <h3>Children Ministry</h3>
+            <p class="text-sm opacity-80">Nurturing faith in our youngest generations.</p>
+          </div>
+        </div>
+
+        <!-- Youth Ministry -->
+        <div class="ministry-card reveal ministry-trigger" data-title="Youth Ministry"
+          data-description="Teens and young adults coming together to grow in faith, discover their purpose, and build lasting friendships."
+          data-leader="Bro. Daniel Smith" data-schedule="Saturdays at 5:00 PM" data-image="images/YouthMinistry.png">
+          <img src="images/YouthMinistry.png" alt="Youth Ministry">
+          <div class="ministry-overlay">
+            <h3>Youth Ministry</h3>
+            <p class="text-sm opacity-80">Empowering the leaders of tomorrow.</p>
+          </div>
+        </div>
+
+        <!-- Women Fellowship -->
+        <div class="ministry-card reveal ministry-trigger" data-title="Women Fellowship"
+          data-description="A community of women growing together in faith, supporting one another, and discovering their God-given potential."
+          data-leader="Rev. Angeline S. Henry" data-schedule="Bi-weekly Saturdays" data-image="images/pastor.png">
+          <img src="images/pastor.png" alt="Women Fellowship">
+          <div class="ministry-overlay">
+            <h3>Women Fellowship</h3>
+            <p class="text-sm opacity-80">Daughters of the King, united in faith.</p>
+          </div>
+        </div>
+
+        <!-- Men Fellowship -->
+        <div class="ministry-card reveal ministry-trigger" data-title="Men Fellowship"
+          data-description="Iron sharpening iron. Men gathering to build character, integrity, and spiritual strength."
+          data-leader="Elder Thomas Miller" data-schedule="Monthly Saturday Meetings"
+          data-image="images/MenFellowship.png">
+          <img src="images/MenFellowship.png" alt="Men Fellowship">
+          <div class="ministry-overlay">
+            <h3>Men Fellowship</h3>
+            <p class="text-sm opacity-80">Strengthening men to lead with heart.</p>
+          </div>
+        </div>
+
+        <!-- Prayer Ministry -->
+        <div class="ministry-card reveal ministry-trigger" data-title="Prayer Ministry"
+          data-description="Interceding for our church, community, and nation. We believe in the transforming power of prayer."
+          data-leader="Sis. Mary Williams" data-schedule="Fridays at 7:00 PM" data-image="images/pastor_1.png">
+          <img src="images/pastor_1.png" alt="Prayer Ministry">
+          <div class="ministry-overlay">
+            <h3>Prayer Ministry</h3>
+            <p class="text-sm opacity-80">Standing in the gap through prayer.</p>
+          </div>
+        </div>
+
+        <!-- Worship Team -->
+        <div class="ministry-card reveal ministry-trigger" data-title="Worship Team"
+          data-description="Leading the congregation into the presence of God through music and praise."
+          data-leader="Bro. Michael David" data-schedule="Thursdays 7:00 PM Rehearsals"
+          data-image="images/WorshipMinistry.png">
+          <img src="images/WorshipMinistry.png" alt="Worship Team">
+          <div class="ministry-overlay">
+            <h3>Worship Team</h3>
+            <p class="text-sm opacity-80">Anointed sounds of praise.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center gap-4 mb-6">
+            <img src="images/church-logo.png" alt="Logo" class="h-12 w-auto">
+            <h3 class="font-montserrat font-bold text-2xl tracking-tight">El Shaddai Church</h3>
+          </div>
+          <p class="text-gray-400 max-w-md mb-8">
+            A vibrant, Spirit-filled community in Aberdeen committed to worshipping God, growing in faith, and serving
+            our city.
+          </p>
+          <div class="flex gap-4">
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all"><i
+                class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all"><i
+                class="fa-brands fa-instagram"></i></a>
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all"><i
+                class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="ministries.html">Ministries</a></li>
+            <li><a href="sermons.html">Sermons</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Service Times</h4>
+          <ul>
+            <li>Sunday Worship – 10:30 AM</li>
+            <li>Wednesday Prayer – 7:00 PM</li>
+            <li>Friday Bible Study – 7:00 PM</li>
+            <li>Saturday Youth – 5:00 PM</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact Info</h4>
+          <ul>
+            <li>📍 Aberdeen, Scotland</li>
+            <li>📞 +44 (0) 1224 000000</li>
+            <li>✉️ info@elshaddaichurch.org.uk</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 El Shaddai Church Aberdeen. Made with ❤️ for God's glory.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══ MINISTRY MODAL ══ -->
+  <div id="ministryModal" class="modal-overlay hidden opacity-0 transition-opacity duration-300">
+    <div id="modalContent" class="modal-content scale-90 transition-transform duration-300">
+      <button class="close-modal" id="closeModal">&times;</button>
+      <div class="grid md:grid-cols-2">
+        <div class="h-64 md:h-auto">
+          <img id="modalImage" src="" alt="" class="w-full h-full object-cover">
+        </div>
+        <div class="p-10 flex flex-col justify-center">
+          <span class="text-accent font-bold uppercase tracking-widest text-xs mb-2">Our Ministries</span>
+          <h3 id="modalTitle" class="font-montserrat font-bold text-3xl mb-4"></h3>
+          <p id="modalDescription" class="text-gray-600 mb-8 leading-relaxed"></p>
+
+          <div class="space-y-4 border-t pt-8">
+            <div class="flex items-center gap-3">
+              <span class="font-bold">Leader:</span>
+              <span id="modalLeader" class="text-gray-600"></span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="font-bold">Schedule:</span>
+              <span id="modalSchedule" class="text-gray-600"></span>
+            </div>
+          </div>
+
+          <div class="mt-10">
+            <a href="contact.html?subject=ministry" class="btn btn-primary">Join Ministry</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>
